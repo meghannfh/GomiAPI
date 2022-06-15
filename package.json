@@ -1,0 +1,27 @@
+{
+  "name": "nagaigomi",
+  "version": "1.0.0",
+  "description": "A JSON API of Disposable Items for Nagai City, Yamagata. This data will be used to create a garbage disposal app that allows users to search for disposal instructions based on item name, material, or classification.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meghannfh/nagaiCityGomiAPI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meghannfh/nagaiCityGomiAPI/issues"
+  },
+  "homepage": "https://github.com/meghannfh/nagaiCityGomiAPI#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "mongodb": "^4.7.0"
+  }
+}
