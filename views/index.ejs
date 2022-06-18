@@ -1,0 +1,24 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Quotes</h2>
+        <ul class="postGarbage">
+            <% for(var i = 0; i < garbage.length; i++) {%>
+            <li class="quote">
+                <span><%= garbage[i].name %></span>
+                <span><%= garbage[i].materials %></span>
+                <span><%= garbage[i].classification %></span>
+                <span><%= garbage[i].instructions %></span>
+                <span><%= garbage[i].contact %></span>
+            </li>
+            <% } %>
+        </ul>
+</body>
+</html>
