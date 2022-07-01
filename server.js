@@ -4,7 +4,6 @@ const { MongoClient, ObjectId } = require("mongodb");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const { response } = require("express");
-// const { BSONRegExp } = require('bson')
 // const ejs = require('ejs')
 require("dotenv").config();
 
@@ -17,8 +16,9 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-let db;
-(dbName = "nagai-city-data"), (dbConnectionStr = process.env.MONGO_DB_KEY);
+let db
+    dbName = 'garbage-disposal-api',
+    dbConnectionStr = process.env.MONGO_DB_KEY
 
 MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true }).then(
   (client) => {
@@ -88,3 +88,30 @@ app.post("/garbages", (req, res) => {
 app.listen(process.env.PORT || PORT, () => {
   console.log("Sever is running.");
 });
+
+app.get('/search', async(request,response) => {
+    try {
+        //sending search object to mongodb to have mongo search the db
+        let result = await collection.aggregate([
+            {
+                "$search" : {
+                    "autocomplete" : {
+                        "query": `${request.query.query}`,
+                        "path":"title",
+                        "fuzzy": {
+                            "maxEdits":2,
+                            "prefixLength":3
+                        }
+                    }
+                }
+            },
+            { 
+                $limit : 10 
+            }
+        ]).toArray()
+        console.log(result)
+        response.send(result)
+    } catch(error){
+        response.status(500).send({message: error.message})
+    }
+})
