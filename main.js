@@ -1,12 +1,13 @@
 $(document).ready(function () {
-  $("#name").autocomplete({
+  $("#item").autocomplete({
     source: async function (req, res) {
       let data = await fetch(`http://localhost:3001/search/?query=${req.term}`)
         .then((results) => results.json())
         .then((results) =>
           results.map((result) => {
             return {
-              name: result.name,
+              label: result.name,
+              value: result.name,
               id: result._id,
             };
           })
@@ -19,11 +20,11 @@ $(document).ready(function () {
       fetch(`http://localhost:3001/?get=${ui.item.id}`)
         .then((result) => result.json())
         .then((result) => {
-          $("#name").empty();
-          result.name.forEach((name) => {
-            $(test).append("<li>${name}</li>");
-          });
-        });
-    },
-  });
-});
+          $("#cast").empty();//fix this
+          result.name.forEach(name => {
+            $('#cast').append(`<li>${name}</li>`);//fix this
+          })
+        })
+    }
+  })
+})
