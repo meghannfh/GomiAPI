@@ -46,6 +46,7 @@ app.get("/search", async (req, res) => {
     let result = await collection.aggregate([
         {
           "$search": {
+            "index": "autocomplete",
             //if search index is not called default then we need to include it here
             "autocomplete": {
               "query": `${req.query.query}`,
