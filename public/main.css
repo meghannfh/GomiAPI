@@ -1,0 +1,9 @@
+body {
+    margin-top: 3rem;
+    margin-left: 5rem;
+    color: red;
+}
+
+input {
+    max-width: 400px;
+}
