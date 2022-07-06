@@ -64,8 +64,6 @@ app.get("/search", async (req, res) => {
     //   .find({ name: req.query.term });
     // console.log(test);
     res.send(result);
-    console.log(req.query.term);
-    console.log(result);
   } catch (error) {
     res.status(500).send({ message: error.message });
   }
@@ -73,6 +71,7 @@ app.get("/search", async (req, res) => {
 
 app.get("/get/:id", async (req, res) => {
   try {
+    console.log(req.params);
     let result = await db.collection("nagai-city-data").findOne({
       _id: ObjectId(req.params.id),
     });
