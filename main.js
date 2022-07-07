@@ -19,12 +19,13 @@ $(document).ready(function () {
     select: function (event, ui) {
       console.log(ui.item.id);
       fetch(`http://localhost:3001/get/${ui.item.id}`)
-        .then((result) => result.json())
+        .then((response) => response.json())
         .then((result) => {
-          $("#info").empty();//fix this
-          $('#info').append(`<li>${result.name}</li>`)
-          $('#info').append(`<li>${result.classification}</li>`)
-        })
-    }
-  })
-})
+          console.log(result);
+          $("#name").empty();
+          $("#test").append(`<li>${result.name}</li>`);
+          $("#test").append(`<li>${result.classification}</li>`);
+        });
+    },
+  });
+});
