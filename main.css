@@ -6,3 +6,7 @@ body {
 input {
     max-width: 400px;
 }
+
+label {
+    color: red;
+}

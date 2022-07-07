@@ -8,22 +8,22 @@ $(document).ready(function () {
             return {
               label: result.name,
               value: result.name,
-              id: result._id,
+              id: result._id
             };
           })
         );
       res(data);
+      console.log(data)
     },
     minLength: 2,
     select: function (event, ui) {
       console.log(ui.item.id);
-      fetch(`http://localhost:3001/?get=${ui.item.id}`)
+      fetch(`http://localhost:3001/get/${ui.item.id}`)
         .then((result) => result.json())
         .then((result) => {
-          $("#cast").empty();//fix this
-          result.name.forEach(name => {
-            $('#cast').append(`<li>${name}</li>`);//fix this
-          })
+          $("#info").empty();//fix this
+          $('#info').append(`<li>${result.name}</li>`)
+          $('#info').append(`<li>${result.classification}</li>`)
         })
     }
   })

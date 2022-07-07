@@ -12,10 +12,10 @@ const PORT = 3001;
 // app.set("view engine", "ejs");
 // app.use(express.static("public"));
 
-let db
+let db,
     dbName = 'garbage-disposal-api',
     dbConnectionStr = process.env.MONGO_DB_KEY,
-    collection = ''
+    collection
 
 MongoClient.connect(dbConnectionStr)
   .then(client => {
@@ -40,16 +40,14 @@ app.use(express.urlencoded({ extended: true }));
 //     });
 // });
 
-app.get("/search", async (req, res) => {
+app.get("/search", async (request, response) => {
   try {
-    console.log(req.query.query);
     let result = await collection.aggregate([
         {
           "$search": {
-            "index": "autocomplete",
             //if search index is not called default then we need to include it here
             "autocomplete": {
-              "query": `${req.query.query}`,
+              "query": `${request.query.query}`,
               "path": "name",
               "fuzzy": {
                 "maxEdits": 2,
@@ -57,23 +55,26 @@ app.get("/search", async (req, res) => {
               }
             }
           }
-        }
-      ]).toArray();
-    res.send(result);
-    console.log(result);
+        }]).toArray();
+        console.log(result)
+    response.send(result);
+
   } catch (error) {
-    res.status(500).send({ message: error.message });
+    response.status(500).send({ message: error.message });
+    console.log(error)
   }
 });
 
-app.get("/get/:id", async (req, res) => {
+app.get("/get/:id", async (request, response) => {
   try {
     let result = await collection.findOne({
-      "_id": ObjectId(req.params.id)
+      "_id": ObjectId(request.params.id)
     })
-    res.send(result);
+    response.send(result);
+    console.log(result)
   } catch (error) {
-    res.status(500).send({message: error.message})
+    response.status(500).send({message: error.message})
+    console.log(error)
   }
 });
 
