@@ -1,3 +1,5 @@
+const paperImage = '1024px-Recycling_kami.svg.png'
+
 $(document).ready(function () {
   $("#name").autocomplete({
     source: async function (req, res) {
@@ -21,9 +23,18 @@ $(document).ready(function () {
         .then((response) => response.json())
         .then((result) => {
           console.log(result);
-          $("#name").empty();
+          $("#test").empty();
           $("#test").append(`<li>${result.name}</li>`);
-          $("#test").append(`<li>${result.classification}</li>`);
+          $("#test").append(`<li>${result.classification}</li>`)
+          $("#test").append(`<li>${result.instructions}</li>`);
+          $("#test").append(`<li>${result.material}</li>`);
+          $("#test").append(`<li>${result.contact}</li>`);
+          if (result.classification == "Burnable") {
+            // $("#test").append(`<li>Burnable image</li>`);
+            $('img').attr('src', paperImage)
+          } else if (result.classification == "Non-burnable"){
+
+          }
         });
     },
   });

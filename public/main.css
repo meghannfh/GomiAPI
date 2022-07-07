@@ -7,3 +7,8 @@ body {
 input {
     max-width: 400px;
 }
+
+img {
+    max-width: 3rem;
+    max-height: 3rem;
+}

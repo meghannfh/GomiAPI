@@ -3,7 +3,7 @@ const app = express();
 const { MongoClient, ObjectId } = require("mongodb");
 const cors = require("cors");
 const { response } = require("express");
-const { request } = require("http")
+// const { request } = require("http")
 // const ejs = require('ejs')
 require("dotenv").config();
 
@@ -47,11 +47,6 @@ app.get("/search", async (request, response) => {
           }
         }
       ]).toArray();
-
-    // let test = await db
-    //   .collection("nagai-city-data")
-    //   .find({ name: req.query.term });
-    // console.log(test);
     response.send(result);
   } catch (error) {
     response.status(500).send({ message: error.message });
@@ -86,31 +81,3 @@ app.listen(process.env.PORT || PORT, () => {
   console.log("Sever is running.");
 });
 
-app.get("/search", async (request, response) => {
-  try {
-    //sending search object to mongodb to have mongo search the db
-    let result = await collection
-      .aggregate([
-        {
-          $search: {
-            autocomplete: {
-              query: `${request.query.query}`,
-              path: "title",
-              fuzzy: {
-                maxEdits: 2,
-                prefixLength: 3,
-              },
-            },
-          },
-        },
-        {
-          $limit: 10,
-        },
-      ])
-      .toArray();
-    console.log(result);
-    response.send(result);
-  } catch (error) {
-    response.status(500).send({ message: error.message });
-  }
-});
