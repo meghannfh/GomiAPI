@@ -8,23 +8,24 @@ $(document).ready(function () {
             return {
               label: result.name,
               value: result.name,
-              id: result._id,
+              id: result._id
             };
           })
         );
       res(data);
+      console.log(data)
     },
     minLength: 2,
     select: function (event, ui) {
       console.log(ui.item.id);
-      fetch(`http://localhost:3001/?get=${ui.item.id}`)
-        .then((result) => result.json())
+      fetch(`http://localhost:3001/get/${ui.item.id}`)
+        .then((response) => response.json())
         .then((result) => {
-          $("#cast").empty();//fix this
-          result.name.forEach(name => {
-            $('#cast').append(`<li>${name}</li>`);//fix this
-          })
-        })
-    }
-  })
-})
+          console.log(result);
+          $("#name").empty();
+          $("#test").append(`<li>${result.name}</li>`);
+          $("#test").append(`<li>${result.classification}</li>`);
+        });
+    },
+  });
+});
