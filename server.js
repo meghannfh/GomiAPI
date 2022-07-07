@@ -37,7 +37,7 @@ app.get("/search", async (request, response) => {
         {
           "$search": {
             "autocomplete": {
-              "query": `${req.query.query}`,
+              "query": `${request.query.query}`,
               "path": "name",
               "fuzzy": {
                 "maxEdits": 2,
@@ -52,7 +52,7 @@ app.get("/search", async (request, response) => {
     //   .collection("nagai-city-data")
     //   .find({ name: req.query.term });
     // console.log(test);
-    res.send(result);
+    response.send(result);
   } catch (error) {
     response.status(500).send({ message: error.message });
     console.log(error)
@@ -63,12 +63,12 @@ app.get("/get/:id", async (request, response) => {
   try {
     console.log(request.params);
     let result = await db.collection("nagai-city-data").findOne({
-      _id: ObjectId(request.params.id)
+      "_id": ObjectId(request.params.id)
     });
     console.log(result);
-    res.send(result);
+    response.send(result);
   } catch (error) {
-    res.status(500).send({ message: error.message });
+    response.status(500).send({ message: error.message });
   }
 });
 
