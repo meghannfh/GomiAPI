@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 let db;
 (dbName = "garbage-disposal-api"), (dbConnectionStr = 'mongodb+srv://gomisorter:LJpMVxeGPYsSAGfg@cluster0.nf9ipwl.mongodb.net/?retryWrites=true&w=majority');
 
-MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true })
+MongoClient.connect(dbConnectionStr)
 .then(
   (client) => {
     console.log(`Connected to ${dbName} Database`);
@@ -78,6 +78,6 @@ app.get("/get/:id", async (request, response) => {
 // });
 
 app.listen(process.env.PORT || PORT, () => {
-  console.log("Sever is running.");
+  console.log("Server is running.");
 });
 
