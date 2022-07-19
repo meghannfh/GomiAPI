@@ -43,19 +43,33 @@
           <h3 class="itemName" id="itemName"></h3>
         </div>
           
-        <div>
-          <h4 class="burnableDistinction">Burnable: 
+        <div class="burnableDistinction">
+          <!-- <h4 class="burnableDistinction">Burnable:  -->
 
-            <div class="burnable hidden" id="burnable">
-              <span class="yes" id="yes">YES</span>
+            <div class="burnable hidden classTypes" id="burnable">
+              <h4 class="yes" id="yes">Burnable</h4>
               <i class="fa-solid fa-fire fireIcon" id="fireIcon"></i>
             </div>
 
-            <div class="nonburnable hidden" id="nonburnable">
-              <span class="no" id="no">NO</span>
+            <div class="nonburnable hidden classTypes" id="nonburnable">
+              <h4 class="no" id="no">Non-burnable</h4>
               <i class="fa-solid fa-xmark xmark"></i>
             </div>
-          </h4>
+
+            <div class="recyclable hidden classTypes" id="recyclable">
+              <h4 class="recycleTitle" id="recycleTitle">Recyclable</h4>
+              <i class="fa-solid fa-recycle recycleMark"></i>
+            </div>
+
+            <div class="nonCollectable hidden classTypes" id="nonCollectable">
+              <h4 class="nonCollectableTitle" id="nonCollectableTitle">Not collectable</h4>
+              <i class="fa-solid fa-ban"></i>
+            </div>
+
+            <div class="overSize hidden classTypes" id="overSize">
+              <h4 class="overSizeTitle" id="overSizeTitle">Oversized</h4>
+              <i class="fa-solid fa-weight-scale"></i>
+            </div>
         </div>
 
         <div>

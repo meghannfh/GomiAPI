@@ -61,7 +61,7 @@
 .input__field{
     box-sizing: border-box;
     width: 100%;
-    border: 1.5px solid rgb(27, 32, 36);
+    border: 1.5px solid rgb(51, 51, 51);
     padding: calc(.5rem * 1.5) .7rem;
     color: rgb(69, 72, 75);
     background: transparent;
@@ -98,20 +98,38 @@
     flex-direction: column;
     gap: 1rem;
 } */
+/*ITEM NAME STYLES*/
+.itemName{
+    font-size: 2rem;
+}
+
 
 /*BURNABLE OR NOT BURNABLE DESIGANTIONS*/
-.burnable, .nonburnable {
+.burnableDistinction > div > h4{
     display: inline-block;
+    text-transform: uppercase;
+    text-shadow: 0 0 1px rgb(51, 51, 51), 0 0 1px rgb(51, 51, 51), 0 0 1px rgb(51, 51, 51), 0 0 1px rgb(51, 51, 51);
+    letter-spacing: .2rem;
 }
 
 .yes{
     color:rgb(96, 224, 96);
-    margin-left: .32rem;
 }
 
 .no{
     color: rgb(250, 123, 123);
-    margin-left: .32rem;
+}
+
+.recycleTitle{
+    color: rgb(237, 216, 24);
+}
+
+.nonCollectableTitle{
+    color: rgb(148, 148, 148);
+}
+
+.overSizeTitle{
+    color: rgb(161, 113, 255);
 }
 
 .hidden{
@@ -127,6 +145,7 @@
 /*CONTACT INFO*/
 .contactInfo{
     position: fixed;
+    background-color: white;
     bottom: -100%;
     left:0;
     right:0;
@@ -135,7 +154,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1.5px solid rgb(27, 32, 36);
+    /* border: 1px solid rgb(51, 51, 51); */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     border-radius: 20px;
     padding: calc(.5rem * 1.5) .5rem;
     transition: .2s;

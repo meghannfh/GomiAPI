@@ -1,4 +1,5 @@
 const paperImage = '1024px-Recycling_kami.svg.png'
+const classificationTypes = document.querySelectorAll('.classTypes')
 
 let timer;
 
@@ -8,16 +9,16 @@ let instructions;
 let material;
 let contact;
 
-document.addEventListener('input', e => {
-  const el = e.target;
+// document.addEventListener('input', e => {
+//   const el = e.target;
   
-  if( el.matches('[data-color]') ) {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      document.documentElement.style.setProperty(`--color-${el.dataset.color}`, el.value);
-    }, 100)
-  }
-})
+//   if( el.matches('[data-color]') ) {
+//     clearTimeout(timer);
+//     timer = setTimeout(() => {
+//       document.documentElement.style.setProperty(`--color-${el.dataset.color}`, el.value);
+//     }, 100)
+//   }
+// })
 
 $(document).ready(function () {
   $("#name").autocomplete({
@@ -37,8 +38,9 @@ $(document).ready(function () {
     },
     minLength: 2,
     select: function (event, ui) {
-      $('#burnable').addClass('hidden')
-      $('#nonburnable').addClass('hidden')
+
+      reAddClassHidden()
+
       $("#instructions").text('')
       $("#material").text('')
       console.log(ui.item.id);
@@ -48,7 +50,7 @@ $(document).ready(function () {
           console.log(result);
           $("#info").removeClass('hidden')
           $("#name").val('')
-          $("#test").empty();
+
           itemName = result.name
           classification = result.classification
           material = result.material
@@ -60,22 +62,39 @@ $(document).ready(function () {
           material && $("#material").text(material);
 
           checkForContact()
+
           contact && $("#contactNumber").text(contact);
           if (classification == "Burnable") {
             $('#burnable').toggleClass('hidden')
             // $('img').attr('src', paperImage)
-          } else {
+          } else if(classification == 'Non-burnable'){
             $('#nonburnable').toggleClass('hidden')
+          } else if(classification == 'Recyclable'){
+            $('#recyclable').toggleClass('hidden')
+          } else if(classification == 'Not collectable'){
+            $('#nonCollectable').toggleClass('hidden')
+          } else if(classification == 'Oversized'){
+            $('#overSize').toggleClass('hidden')
           }
         });
     },
   });
 });
 
+
+//Check each search for contact property and display contact info box if it exists
+//If !contact then hide contact info box when each new item is selected
 function checkForContact(){
   if(contact){
     document.getElementById('contactInfo').classList.add('show-contact')
   }else{
     document.getElementById('contactInfo').classList.remove('show-contact')
   }
+}
+
+//hide all classification type info at the beginning of each new search
+function reAddClassHidden(){
+  classificationTypes.forEach(type=>{
+    type.classList.add('hidden')
+  })
 }
