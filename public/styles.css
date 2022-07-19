@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;700&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+.container{
+    margin: 6rem auto;
+    width: 60vw;
+    padding: calc(.5rem * 1.5) .5rem;
+}
+
+.searchContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    font-size: 3.4rem;
+    margin: 0 0 calc(.5rem * 3) 0;
+}
+
+.explanation{
+    font-weight: 300;
+    font-size: .7rem;
+    margin: 0 0 0 calc(.5rem * 1.5);
+}
+
+.bottleSpec{
+    font-weight: 600;
+    font-style: italic;
+}
+
+.searchContainer > .explanation + p {
+    margin-bottom: calc(.5rem * 3);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: calc(.5rem * 1.5);
+    padding: calc(.5rem * 1.5) .5rem;
+    border-radius: 15px;
+}
+
+/* img {
+    max-width: 3rem;
+    max-height: 3rem;
+} */
+
+
+/*INPUT STYLES*/
+.input {
+    position: relative;
+}
+
+.input__field{
+    box-sizing: border-box;
+    width: 100%;
+    border: 1.5px solid rgb(27, 32, 36);
+    padding: calc(.5rem * 1.5) .7rem;
+    color: rgb(69, 72, 75);
+    background: transparent;
+    border-radius: 20px;
+}
+
+.input__label{
+    position: absolute;
+    left: 0;
+    padding: calc(.5rem * .75) calc(.5rem * .5);
+    margin: calc(.5rem * .75 + .5px) calc(.5rem * 1.2);
+    white-space: nowrap;
+    transform: translate(0,0);
+    transform-origin: 0 0;
+    background: white;
+    color: #bdbdbd;
+    transition: transform 120ms ease-in;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.input__field:focus + .input__label, .input__field:not(:placeholder-shown) + .input__label {
+    transform: translate(0.25rem, -65%) scale(0.8);
+    color: #fa2a00;
+}
+
+/*END UP INPUT STYLES*/
+
+/* ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+} */
+
+/*BURNABLE OR NOT BURNABLE DESIGANTIONS*/
+.burnable, .nonburnable {
+    display: inline-block;
+}
+
+.yes{
+    color:rgb(96, 224, 96);
+    margin-left: .32rem;
+}
+
+.no{
+    color: rgb(250, 123, 123);
+    margin-left: .32rem;
+}
+
+.hidden{
+    display: none;
+}
+
+/*MATERIAL INGO STYLES*/
+.itemMaterial, .material{
+    display: inline-block;
+}
+
+
+/*CONTACT INFO*/
+.contactInfo{
+    position: fixed;
+    bottom: -100%;
+    left:0;
+    right:0;
+    width: 50vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1.5px solid rgb(27, 32, 36);
+    border-radius: 20px;
+    padding: calc(.5rem * 1.5) .5rem;
+    transition: .2s;
+}
+
+/*show contact info*/
+.show-contact {
+    bottom: 5%;
+  }
+
+.specialOrOversize{
+    font-size: 1.2rem;
+}
+
+.contactExplanation{
+    font-weight: 200;
+    font-size: .8rem;
+    text-align: center;
+}
+
+.phoneIcon{
+    font-size: 2rem;
+}
+
+/*CONTACT INFO END*/

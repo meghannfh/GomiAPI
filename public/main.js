@@ -1,7 +1,23 @@
 const paperImage = '1024px-Recycling_kami.svg.png'
-const aluminumImage = '1280px-Recycling_alumi.svg.png'
-const plasticImage = '1280px-Recycling_pla.svg.png'
-const steelImage = '1280px-Recycling_steel.svg.png'
+
+let timer;
+
+let itemName;
+let classification;
+let instructions;
+let material;
+let contact;
+
+document.addEventListener('input', e => {
+  const el = e.target;
+  
+  if( el.matches('[data-color]') ) {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      document.documentElement.style.setProperty(`--color-${el.dataset.color}`, el.value);
+    }, 100)
+  }
+})
 
 $(document).ready(function () {
   $("#name").autocomplete({
@@ -21,28 +37,45 @@ $(document).ready(function () {
     },
     minLength: 2,
     select: function (event, ui) {
+      $('#burnable').addClass('hidden')
+      $('#nonburnable').addClass('hidden')
+      $("#instructions").text('')
+      $("#material").text('')
       console.log(ui.item.id);
       fetch(`http://localhost:3001/get/${ui.item.id}`)
         .then((response) => response.json())
         .then((result) => {
           console.log(result);
+          $("#info").removeClass('hidden')
+          $("#name").val('')
           $("#test").empty();
-          result.name && $("#test").append("Item: " + `<li>${result.name}</li>`);
-          result.classification && $("#test").append("Classification: " + `<li>${result.classification}</li>`)
-          result.instructions && $("#test").append("Instructions: " + `<li>${result.instructions}</li>`);
-          result.material && $("#test").append("Material: " + `<li>${result.material}</li>`);
-          result.contact && $("#test").append("Contact: " +  `<li>${result.contact}</li>`);
-          if (result.material == "Paper") {
-            // $("#test").append(`<li>Burnable image</li>`);
-            $('img').attr('src', paperImage)
-          } else if (result.material == "Plastic"){
-            $('img').attr('src', plasticImage)
-          } else if (result.material == "Steel"){
-            $('img').attr('src', steelImage)
-          } else if (result.material == "Aluminum"){
-            $('img').attr('src', aluminumImage)
+          itemName = result.name
+          classification = result.classification
+          material = result.material
+          instructions = result.instructions
+          contact = result.contact
+
+          $("#itemName").text(itemName);
+          instructions && $("#instructions").text(instructions);
+          material && $("#material").text(material);
+
+          checkForContact()
+          contact && $("#contactNumber").text(contact);
+          if (classification == "Burnable") {
+            $('#burnable').toggleClass('hidden')
+            // $('img').attr('src', paperImage)
+          } else {
+            $('#nonburnable').toggleClass('hidden')
           }
         });
     },
   });
 });
+
+function checkForContact(){
+  if(contact){
+    document.getElementById('contactInfo').classList.add('show-contact')
+  }else{
+    document.getElementById('contactInfo').classList.remove('show-contact')
+  }
+}

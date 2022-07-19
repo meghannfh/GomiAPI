@@ -9,30 +9,78 @@
       rel="stylesheet"
       href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
     />
+    <link rel="stylesheet" href="styles.css" />
     <!-- <link rel="stylesheet" href="main.css" /> -->
     <script src="//code.jquery.com/jquery-1.12.4.js"></script>
     <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <link href="main.css" rel="stylesheet">
-    <!-- <link href="/dist/output.css" rel="stylesheet"> -->
-    <title>Nagai Gomi</title>
+    <script src="https://kit.fontawesome.com/3bfd3ce9e5.js" crossorigin="anonymous"></script>
+    <title>Document</title>
   </head>
   <body>
     
-    <h2>Garbage</h2>
+    <!-- <h1 class="text-4xl">Garbage</h2> -->
     
     <section class="container">
     
-      <section class="ui-widget">
-        <label for="name"> Name: </label>
-        <input id="name" />
-        <ul id="test"></ul>
+      <section class="searchContainer">
+        <h1 class="title">Throw. It. Away.</h1>
+        <!-- <p class="explanation">Keep your search simple.</p> 
+        <p class="explanation">Searching for<span class="bottleSpec">"bottle"</span> will give you information on various bottles and how to dispose of them.</p> -->
+        <label for="name" class="input">
+        <input id="name" type="text" placeholder=" " class="input__field" />
+
+        <span class="input__label">Enter Item Name</span>
+        </label>
+
+        <p class="explanation">Keep your search simple. Searching for 
+        <span class="bottleSpec">bottle</span> will populate various types of bottles.</p>
+        <!-- <ul id="test"></ul> -->
       </section>
 
-      <section>
-        <img src="" />
+      <section class="info hidden" id="info">
+        
+        <div>
+          <h3 class="itemName" id="itemName"></h3>
+        </div>
+          
+        <div>
+          <h4 class="burnableDistinction">Burnable: 
+
+            <div class="burnable hidden" id="burnable">
+              <span class="yes" id="yes">YES</span>
+              <i class="fa-solid fa-fire fireIcon" id="fireIcon"></i>
+            </div>
+
+            <div class="nonburnable hidden" id="nonburnable">
+              <span class="no" id="no">NO</span>
+              <i class="fa-solid fa-xmark xmark"></i>
+            </div>
+          </h4>
+        </div>
+
+        <div>
+          <h4 class="itemMaterial" id="itemMaterial">Material:</h4>
+          <p class="material" id="material"></p>
+        </div>
+          
+        <div>
+          <h4 class="instructionsHeader">Instructions:</h5>
+          <p class="instructions" id="instructions"></p>
+        </div>
+
+        <!-- <div class="iconContainer">
+          <img src="" />
+        </div> -->
       </section>
     
     </section>
+
+    <div class="contactInfo" id="contactInfo">
+      <h5 class="specialOrOversize">This is a special or oversize item.</h5>
+      <p class="contactExplanation">It may be necessary for you to call Nagai City Hall for more information.</p>
+      <h3 class="phoneNumber" id="contactNumber"></h3>
+      <i class="fa-solid fa-phone-volume phoneIcon"></i>
+    </div>
     
     <script src="main.js"></script>
   </body>
