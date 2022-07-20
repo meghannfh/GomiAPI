@@ -3,7 +3,7 @@
         "name": "Abacus",
         "material": "Bamboo",
         "classification": "Burnable",
-        "instructions": "Those made of plastic go into non-burnable."
+        "instructions": "Items made of plastic are non-burnable."
     },
     {
         "name": "Accordion curtain (folding partition)",
@@ -17,7 +17,7 @@
         "instructions": "Please consult with place of purchase."
     },
     {
-        "name": "Agricultural vinyl ",
+        "name": "Agricultural vinyl",
         "material": "Plastic ",
         "classification": "Not collectable",
         "instructions": "Please consult with place of purchase."
@@ -25,7 +25,8 @@
     {
         "name": "Air conditioner",
         "classification": "Not collectable",
-        "instructions": "This is a recyclable home appliance. Please consult with place of purhcase or the city hall."
+        "instructions": "This is a recyclable home appliance. Please consult with place of purhcase or city hall.",
+        "contact": "0238-82-8007"
     },
     {
         "name": "Air freshener container (empty)",
@@ -44,13 +45,13 @@
         "contact": "0238-82-8007"
     },
     {
-        "name": "Aluminum coated bag ",
+        "name": "Aluminum coated bag",
         "material": "Plastic",
-        "classification": "Recyclable (plastic)",
+        "classification": "Recyclable",
         "instructions": "Those which are clean and have a recyclable plastic mark go into recyclable plastic."
     },
     {
-        "name": "Aluminum coated bag ",
+        "name": "Aluminum coated bag",
         "material": "Paper, plastic",
         "classification": "Burnable",
         "instructions": "Those which have oil stuck to them go into burnable."
@@ -59,7 +60,7 @@
         "name": "Aluminum foil",
         "material": "Aluminum, plastic composite material",
         "classification": "Non-burnable",
-        "instructions": "Those which cannot be cleaned go into burnable."
+        "instructions": "Items that cannot be cleaned completely are burnable."
     },
     {
         "name": "Anorak jacket",
@@ -69,7 +70,8 @@
     {
         "name": "Aquarium",
         "classification": "Non-burnable",
-        "instructions": "If it does not fit into the designated bag, or it is heavy enough to break the bag, it is classified as oversized."
+        "instructions": "If it does not fit into the designated bag, or it is heavy enough to break the bag, it is classified as oversized. Please consult with city hall",
+        "contact": "0238-82-8007"
     },
     {
         "name": "Ashes",
@@ -84,7 +86,7 @@
     {
         "name": "Baby carriage / stroller",
         "classification": "Oversized",
-        "instructions": "Please schedule a pickup with city hall",
+        "instructions": "Please consult with city hall",
         "contact": "0238-82-8007"
     },
     {
@@ -106,7 +108,7 @@
     {
         "name": "Barbeque stove",
         "classification": "Non-burnable",
-        "instructions": "Those that do not fit into the designated bag are classified as oversized.",
+        "instructions": "Those that do not fit into the designated bag are classified as oversized. Please consult with city hall",
         "contact": "0238-82-8007"
     },
     {
@@ -146,28 +148,28 @@
         "name": "Bathroom scale",
         "material": "Metal",
         "classification": "Non-burnable",
-        "instructions": "Remove any batteries and put out with hazardous waste."
+        "instructions": "Remove batteries and dispose with hazardous waste."
     },
     {
         "name": "Bathtub cover",
         "material": "Plastic",
         "classification": "Non-burnable",
-        "instructions": "Those which do not fit into the designated bag are classified as oversized.",
+        "instructions": "Those which do not fit into the designated bag are classified as oversized. Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
-        "name": "Batteries",
+        "name": "Battery",
         "classification": "Hazardous",
         "instructions": "Place in transparent vinyl bag."
     },
     {
-        "name": "Batteries",
+        "name": "Battery",
         "material": "Button cell battery, rechargeable battery",
         "classification": "Not collectable",
-        "instructions": "Please take back to dealer or place of purchase."
+        "instructions": "Please consult with place of purchase."
     },
     {
-        "name": "Batteries",
+        "name": "Battery",
         "classification": "Not collectable",
         "instructions": "Please consult with your place of purchase or a waste disposal company."
     },
@@ -178,24 +180,25 @@
     {
         "name": "Bed frame",
         "classification": "Oversized",
-        "instructions": "Please schedule a pickup with city hall",
+        "instructions": "Please consult with city hall",
         "contact": "0238-82-8007"
     },
     {
         "name": "Bed mat",
         "classification": "Oversized",
-        "instructions": "Please schedule a pickup with city hall",
+        "instructions": "Please consult with city hall",
         "contact": "0238-82-8007"
     },
     {
         "name": "Beer bottle",
-        "classification": "Recyclable（empty glass bottles）"
+        "material": "Glass",
+        "classification": "Recyclable"
     },
     {
         "name": "Belt",
         "material": "Synthetic fiber, leather, synthetic leather",
         "classification": "Burnable",
-        "instructions": "Any metal goes into non-burnable."
+        "instructions": "Any metal is non-burnable."
     },
     {
         "name": "Bento box",
@@ -212,17 +215,18 @@
         "name": "Bird cage",
         "material": "Wood, bamboo",
         "classification": "Burnable",
-        "instructions": "Any metal goes into non-burnable."
+        "instructions": "Any metal is non-burnable."
     },
     {
         "name": "Blanket",
-        "classification": "Recyclable（cloth）",
-        "instructions": "Those which cannot be cleaned go into burnable."
+        "material": "Cloth",
+        "classification": "Recyclable",
+        "instructions": "Items that cannot be cleaned are burnable. Recyclable items should be placed in a clear vinyl bag."
     },
     {
         "name": "Blinds",
         "classification": "Oversized",
-        "instructions": "Please schedule a pickup with city hall",
+        "instructions": "Please consult with city hall",
         "contact": "0238-82-8007"
     },
     {
@@ -246,14 +250,14 @@
         "classification": "Burnable"
     },
     {
-        "name": "Bottle cap ",
+        "name": "Bottle cap (metal)",
         "material": "Metal",
         "classification": "Non-burnable"
     },
     {
-        "name": "Bottle cap ",
+        "name": "Bottle cap (plastic)",
         "material": "Plastic",
-        "classification": "Recyclable (plastic)"
+        "classification": "Recyclable"
     },
     {
         "name": "Bowling ball",
@@ -271,7 +275,7 @@
     {
         "name": "Brick",
         "classification": "Non-burnable",
-        "instructions": "If in large quantities, it is classified as industrial waste. Please consult city hall for disposal instructions.",
+        "instructions": "If in large quantities, it is classified as industrial waste. Please consult city hall",
         "contact": "0238-82-8007"
     },
     {
@@ -285,10 +289,10 @@
         "classification": "Non-burnable"
     },
     {
-        "name": "Broom ",
+        "name": "Broom",
         "material": "Wood, bamboo",
         "classification": "Burnable",
-        "instructions": "Those which do not fit into the designated bag are classified as oversized. Please consult city hall for disposal instructions.",
+        "instructions": "Items that do not fit into the designated bag are classified as oversized. Please consult with city hall",
         "contact": "0238-82-8007"
     },
     {
@@ -304,17 +308,17 @@
     {
         "name": "Button cell battery (watch battery)",
         "classification": "Not collectable",
-        "instructions": "Please take back to dealer or place of purchase."
+        "instructions": "Please return to dealer or place of purchase."
     },
     {
         "name": "Calculator",
         "classification": "Non-burnable",
-        "instructions": "Remove batteries and place into transparent bag to go out with hazardous waste."
+        "instructions": "Remove batteries, place in clear vinyl bag and dispose of with hazardous waste."
     },
     {
         "name": "Calendar",
         "material": "Paper",
-        "classification": "Recyclable（used paper）",
+        "classification": "Recyclable",
         "instructions": "Metal parts are non-burnable."
     },
     {
@@ -325,13 +329,14 @@
     {
         "name": "Can (empty)",
         "material": "Metal",
-        "classification": "Recyclable（empty cans）",
-        "instructions": "Those which cannot be cleaned go into non-burnable."
+        "classification": "Recyclable",
+        "instructions": "Items that cannot be cleaned are non-burnable."
     },
     {
         "name": "Can pull tab",
-        "classification": "Recyclable（empty cans）",
-        "instructions": "Place into the can or into the bag along with empty cans."
+        "material": "Metal",
+        "classification": "Recyclable",
+        "instructions": "Place into its can or into the bag along with empty cans."
     },
     {
         "name": "Candle",
@@ -339,13 +344,14 @@
     },
     {
         "name": "Cardboard",
-        "classification": "Recyclable（used paper）",
+        "material": "Paper",
+        "classification": "Recyclable",
         "instructions": "Bundle together crosswise with a paper string."
     },
     {
         "name": "Carpet",
         "classification": "Burnable",
-        "instructions": "Cut into 50cm segments. Those which do not fit into the designated bag are classified as oversized. Please consult city hall for disposal instructions.",
+        "instructions": "Cut into 50cm segments. Those which do not fit into the designated bag are classified as oversized. Please consult with city hall",
         "contact": "0238-82-8007"
     },
     {
@@ -357,13 +363,13 @@
         "name": "Cashbox (portable)",
         "material": "Metal",
         "classification": "Non-burnable",
-        "instructions": "If it does not fit into the designated bag, or it is heavy enough to break the bag, it is classified as oversized. Please consult city hall for disposal instructions.",
+        "instructions": "If it does not fit into the designated bag, or it is heavy enough to break the bag, it is classified as oversized. Please consult with city hall",
         "contact": "0238-82-8007"
     },
     {
         "name": "Cassette cylinder（for tabletop stove）",
         "classification": "Non-burnable",
-        "instructions": "Make a hole in the container and circle the opening with a marker, etc. Let the gas inside out completely."
+        "instructions": "Punch a hole in the container to remove remaining gas. Circle punctured area with marker."
     },
     {
         "name": "Cassette tape",
@@ -427,8 +433,8 @@
     {
         "name": "Clothing",
         "material": "Cotton",
-        "classification": "Recyclable（cloth）",
-        "instructions": "Place in a transparent vinyl bag. There is no need to remove any buttons or fasteners."
+        "classification": "Recyclable",
+        "instructions": "Place in a clear vinyl bag. There is no need to remove any buttons or fasteners."
     },
     {
         "name": "Clothing ",
@@ -459,13 +465,13 @@
     {
         "name": "Clothing dryer",
         "classification": "Not collectable",
-        "instructions": "This is a recyclable home appliance. Please consult with place of purhcase or the city hall.",
+        "instructions": "This is a recyclable home appliance. Please consult with place of purhcase or city hall.",
         "contact": "0238-82-8007"
     },
     {
         "name": "Coal",
         "classification": "Burnable",
-        "instructions": "Includes charcoal briquettes and ashes. Put out a little at a time."
+        "instructions": "Includes charcoal briquettes and ashes. Dispose of this item a little at a time."
     },
     {
         "name": "Comb",
@@ -486,7 +492,7 @@
     {
         "name": "Cooking stove",
         "classification": "Non-burnable",
-        "instructions": "If it does not fit into the designated bag, or it is heavy enough to break the bag, it is classified as oversized. Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "If it does not fit into the designated bag, or it is heavy enough to break the bag, it is classified as oversized. Please consult with city hall",
         "contact": "0238-82-8007"
     },
     {
@@ -504,24 +510,24 @@
         "name": "Curtains",
         "material": "Cloth",
         "classification": "Burnable",
-        "instructions": "Remove the metal fittings and put into non-burnable."
+        "instructions": "Remove the metal fittings and dispose of with non-burnable."
     },
     {
         "name": "Cushion",
         "material": "Polyurethane",
         "classification": "Burnable",
-        "instructions": "Remove the metal fittings and put into non-burnable."
+        "instructions": "Remove the metal fittings and dispose of with non-burnable."
     },
     {
         "name": "Cutting board",
         "material": "Wood",
         "classification": "Burnable",
-        "instructions": "Plastic goes into non-burnable"
+        "instructions": "Items made of plasic are non-burnable"
     },
     {
         "name": "Dehumidifier",
         "classification": "Oversized",
-        "instructions": "Even those which can fit into the designated bag are classified as oversized. Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Even those which can fit into the designated bag are classified as oversized. Please consult with city hall",
         "contact": "0238-82-8007"
     },
     {
@@ -543,13 +549,13 @@
     {
         "name": "Detergent / soap container",
         "material": "Plastic",
-        "classification": "Recyclable (plastic)",
+        "classification": "Recyclable",
         "instructions": "Wash the inside and drain the water. Items that cannot be cleaned go into burnable waste."
     },
     {
         "name": "Detergent / soap container",
         "material": "Paper",
-        "classification": "Recyclable（Wastepaper）",
+        "classification": "Recyclable",
         "instructions": "Wash the inside and drain the water. Items that cannot be cleaned go into burnable waste.。"
     },
     {
@@ -567,21 +573,19 @@
     {
         "name": "Dish soap container",
         "material": "Plastic",
-        "classification": "Burnable",
-        "instructions": "Too difficult to clean completely."
+        "classification": "Burnable"
     },
     {
         "name": "Doll case",
         "material": "Glass",
         "classification": "Non-burnable",
-        "instructions": "Those which do not fit into the designated bag are classified as oversized.",
+        "instructions": "Those which do not fit into the designated bag are classified as oversized. Please consult with city hall",
         "contact": "0238-82-8007"
     },
     {
-        "name": "Doormat（outdoor)",
+        "name": "Doormat（outdoor includes Turf mat)",
         "material": "Plastic",
-        "classification": "Non-burnable",
-        "instructions": "Eg. Turf mat, etc."
+        "classification": "Non-burnable"
     },
     {
         "name": "Doormat（indoor)",
@@ -591,7 +595,7 @@
     {
         "name": "Down comforter",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall",
         "contact": "0238-82-8007"
     },
     {
@@ -611,7 +615,7 @@
     {
         "name": "Drywall",
         "classification": "Non-burnable",
-        "instructions": "You can also bring to the Clean Center (garbage disposal plant) by yourself, but large amounts are not collectable."
+        "instructions": "You can also bring to the Clean Center (garbage disposal plant) by yourself. However, large amounts are not collectable."
     },
     {
         "name": "Dustpan ",
@@ -626,7 +630,7 @@
     {
         "name": "DVD player",
         "classification": "Small appliances",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall",
         "contact": "0238-82-8007"
     },
     {
@@ -646,8 +650,8 @@
     {
         "name": "Egg carton",
         "material": "Plastic",
-        "classification": "Recyclable (plastic)",
-        "instructions": "Flatten first."
+        "classification": "Recyclable",
+        "instructions": "Flatten item first."
     },
     {
         "name": "Electric blanket ",
@@ -659,13 +663,13 @@
         "name": "Power cord ",
         "material": "Metal",
         "classification": "Non-burnable",
-        "instructions": "Cut heating wires into 50cm segments and put into non-burnable. If not possible, it is classified as oversized.",
+        "instructions": "Cut heating wires into 50cm segments and put into non-burnable. If not possible, it is classified as oversized. Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
         "name": "Electric carpet",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
@@ -676,7 +680,7 @@
     {
         "name": "Electric massage chair",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
@@ -695,19 +699,19 @@
     },
     {
         "name": "Engine oil",
-        "classification": "Not collectable。",
+        "classification": "Not collectable",
         "instructions": "Please contact your dealer/place of purchase or a waste disposal company."
     },
     {
         "name": "Envelope",
         "material": "Paper",
-        "classification": "Recyclable（used paper）",
-        "instructions": "Peel off any cellophane used for windowed envelopes and put into burnable."
+        "classification": "Recyclable",
+        "instructions": "Peel off any cellophane used for windowed envelopes and dispose of with burnable."
     },
     {
         "name": "Exercise bar",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
@@ -719,7 +723,7 @@
         "name": "Eye drop container",
         "material": "Plastic",
         "classification": "Burnable",
-        "instructions": "If washed, it becomes recyclable (plastic)"
+        "instructions": "If item is washed it is then recyclable plastic"
     },
     {
         "name": "Facial cleansing soap container",
@@ -737,7 +741,7 @@
     {
         "name": "Fan (electric)",
         "classification": "Non-burnable",
-        "instructions": "Cut cord into 50cm segments. Those which do not fit into the designated bag are classified as oversized.",
+        "instructions": "Cut cord into 50cm segments. Those which do not fit into the designated bag are classified as oversized. Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
@@ -748,7 +752,7 @@
     {
         "name": "File case",
         "material": "Plastic",
-        "classification": "Recyclable (plastic)"
+        "classification": "Recyclable"
     },
     {
         "name": "Film (negative)",
@@ -781,7 +785,7 @@
     {
         "name": "Flashlight",
         "classification": "Non-burnable",
-        "instructions": "Remove any batteries and put out with hazardous waste."
+        "instructions": "Remove any batteries and dispose of with hazardous waste."
     },
     {
         "name": "Floppy disk",
@@ -799,8 +803,7 @@
     {
         "name": "Flour (cooking)",
         "material": "Wheat flour, buckwheat flour",
-        "classification": "Burnable",
-        "instructions": "Similar products are also accepted."
+        "classification": "Burnable"
     },
     {
         "name": "Flower pot",
@@ -824,17 +827,13 @@
     },
     {
         "name": "Food scraps / raw waste（Rainbow Plan compost）",
-        "classification": "Burnable",
-        "instructions": "Outside of Chuo District, etc. (see pg. 4 of booklet)"
-    },
-    {
-        "name": "Food scraps / raw waste（Rainbow Plan compost）",
-        "classification": "Recyclable（raw waste）",
-        "instructions": "Within Chuo District, etc. (see pg. 4 of booklet)"
+        "classification": "Recyclable",
+        "instructions": "To recycle please dispose of raw waste in designated compost collection buckets that are set out on compost collection days. All other raw waste can be disposed of with burnable garbage."
     },
     {
         "name": "Food tray",
-        "classification": "Recyclable (plastic)",
+        "material": "Plastic",
+        "classification": "Recyclable",
         "instructions": "Wash and let dry first."
     },
     {
@@ -845,7 +844,7 @@
     {
         "name": "Futon",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
@@ -857,8 +856,8 @@
     {
         "name": "Gardening soil bag (empty)",
         "material": "Plastic",
-        "classification": "Recyclable (plastic)",
-        "instructions": "Those that cannot be cleaned go into burnable."
+        "classification": "Recyclable",
+        "instructions": "Items that cannot be cleaned are burnable."
     },
     {
         "name": "Glass",
@@ -868,14 +867,13 @@
     {
         "name": "Glass bottle (empty)",
         "material": "Glass",
-        "classification": "Recyclable（empty glass bottles）",
-        "instructions": "Wash out the inside with water and let dry. Items that cannot be cleaned go into non-burnable."
+        "classification": "Recyclable",
+        "instructions": "Rinse and let dry. Items that cannot be cleaned are non-burnable."
     },
     {
-        "name": "Glass cleaner",
-        "material": "Plastic container",
-        "classification": "Burnable",
-        "instructions": "Too difficult to clean completely."
+        "name": "Glass cleaner (container)",
+        "material": "Plastic",
+        "classification": "Burnable"
     },
     {
         "name": "Glasses",
@@ -893,14 +891,14 @@
     {
         "name": "Glue container ",
         "material": "Plastic",
-        "classification": "Recyclable (plastic)",
-        "instructions": "Those that cannot be cleaned go into non-burnable."
+        "classification": "Recyclable",
+        "instructions": "Items that cannot be cleaned are non-burnable."
     },
     {
         "name": "Glue container ",
         "material": "Glass",
-        "classification": "Recyclable（empty glass bottles）",
-        "instructions": "Those that cannot be cleaned go into non-burnable."
+        "classification": "Recyclable",
+        "instructions": "Items that cannot be cleaned are non-burnable."
     },
     {
         "name": "Goggles",
@@ -910,7 +908,7 @@
     {
         "name": "Guitar",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
@@ -922,7 +920,7 @@
         "name": "Hairspray can",
         "material": "Metal",
         "classification": "Non-burnable",
-        "instructions": "Make a hole in the container and circle the opened area with a marker, etc.. Let the gas inside out completely."
+        "instructions": "Punch a hole in the container to remove remaining gas. Circle the punctured area with a marker."
     },
     {
         "name": "Hanger ",
@@ -962,8 +960,8 @@
     {
         "name": "Hors d'oeuvre container",
         "material": "Plastic",
-        "classification": "Recyclable (plastic)",
-        "instructions": "Wash and let dry. Those that cannot be cleaned go into burnable."
+        "classification": "Recyclable",
+        "instructions": "Wash and let dry. Items that cannot be cleaned are burnable."
     },
     {
         "name": "Hose",
@@ -974,7 +972,7 @@
         "name": "Hot carpet",
         "material": "Cotton, acrylic",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
@@ -1002,7 +1000,7 @@
     {
         "name": "Incandescent light bulb",
         "classification": "Non-burnable",
-        "instructions": "Wrap in newspaper, etc."
+        "instructions": "Wrap in newspaper before disposal."
     },
     {
         "name": "Ink ribbon",
@@ -1013,18 +1011,18 @@
         "name": "Inkjet container",
         "material": "Plastic",
         "classification": "Burnable",
-        "instructions": "Depending on the store, there may also be a collection service."
+        "instructions": "Please consult with place of purchase."
     },
     {
-        "name": "Insecticide container",
+        "name": "Insecticide (spray can)",
         "material": "Metal",
         "classification": "Non-burnable",
-        "instructions": "Make a hole in the container and circle the opened area with a marker, etc.. Let the gas inside out completely."
+        "instructions": "Punch a hole in the container to remove remaining gas. Circle punctured area with a marker."
     },
     {
         "name": "Instant water heater",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
@@ -1042,10 +1040,10 @@
         "classification": "Non-burnable"
     },
     {
-        "name": "Kerosene tank ",
+        "name": "Kerosene tank",
         "material": "Plastic",
         "classification": "Non-burnable",
-        "instructions": "Empty the kerosene first."
+        "instructions": "Remove all remaining kerosene before disposal. Kerosene removal can be done at most gasoline stands."
     },
     {
         "name": "Kettle",
@@ -1055,13 +1053,14 @@
     {
         "name": "Keyboard（instrument）",
         "classification": "Non-burnable",
-        "instructions": "Those that do not fit into the designated bag are classified as oversized.",
+        "instructions": "Items that do not fit into the designated bag are classified as oversized. Please consult with city hall",
         "contact": "0238-82-8007"
     },
     {
         "name": "Keyboard（computer）",
         "classification": "Non-burnable",
-        "instructions": "Please contact your local municipality for instructions"
+        "instructions": "Please consult with city hall",
+        "contact": "0238-82-8007"
     },
     {
         "name": "Knife",
@@ -1071,37 +1070,37 @@
     {
         "name": "Kitchen wagon (rack with wheels)",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
         "name": "Knitting machine",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
         "name": "Kotatsu (Heating element)",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
         "name": "Kotatsu mat",
         "classification": "Burnable",
-        "instructions": "Cut into 50cm squares. Those that do not fit into the designated bag are classified as oversized.",
+        "instructions": "Cut into 50cm squares. Items that do not fit into the designated bag are classified as oversized. Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
         "name": "Kotatsu tabletop",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
         "name": "Laundry drying rod",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
@@ -1126,8 +1125,7 @@
     {
         "name": "Liquid detergent container",
         "material": "Plastic",
-        "classification": "Burnable",
-        "instructions": "Too difficult to clean completely."
+        "classification": "Burnable"
     },
     {
         "name": "Lunch box",
@@ -1135,7 +1133,8 @@
     },
     {
         "name": "Magazines",
-        "classification": "Recyclable（used paper）"
+        "material": "Paper",
+        "classification": "Recyclable"
     },
     {
         "name": "Magic marker",
@@ -1152,13 +1151,13 @@
     {
         "name": "Makeup bottle",
         "material": "Glass",
-        "classification": "Recyclable（empty glass bottles）",
-        "instructions": "Those that cannot be cleaned go into non-burnable."
+        "classification": "Recyclable",
+        "instructions": "Those that cannot be cleaned are non-burnable."
     },
     {
         "name": "Mattress",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
@@ -1177,17 +1176,13 @@
     {
         "name": "Microwave oven",
         "classification": "Oversized",
-        "instructions": "Even those which can fit into the designated bag are classified as oversized.",
+        "instructions": "Even items that can fit into the designated bag are classified as oversized. Please consult with city hall",
         "contact": "0238-82-8007"
     },
     {
         "name": "MiniDisc",
-        "classification": "Burnable"
-    },
-    {
-        "name": "MiniDisc case",
-        "material": "Hard plastic",
-        "classification": "Non-burnable"
+        "classification": "Burnable",
+        "instructions": "If there is a case on this item, it is classified as non-burnable."
     },
     {
         "name": "Mirror",
@@ -1202,13 +1197,13 @@
     {
         "name": "Mobile phone",
         "classification": "Small appliances",
-        "instructions": "Please direct any questions to the Citizen's Division of the city hall.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
         "name": "Mochi-making machine",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
@@ -1230,10 +1225,9 @@
         "classification": "Non-burnable"
     },
     {
-        "name": "Nails",
+        "name": "Nails (home carpentry)",
         "material": "Metal",
-        "classification": "Non-burnable",
-        "instructions": "Those used for home carpentry, etc."
+        "classification": "Non-burnable"
     },
     {
         "name": "Needle",
@@ -1243,68 +1237,70 @@
     },
     {
         "name": "Newspaper",
-        "classification": "Recyclable（used paper）"
+        "material": "Paper",
+        "classification": "Recyclable"
     },
     {
-        "name": "Nori seaweed container ",
+        "name": "Nori seaweed container",
         "material": "Plastic",
-        "classification": "Recyclable (plastic)"
+        "classification": "Recyclable"
     },
     {
         "name": "Nori seaweed container",
         "material": "Metal",
-        "classification": "Recyclable（cans）"
+        "classification": "Recyclable"
     },
     {
         "name": "Notebook",
-        "classification": "Recyclable（used paper）"
+        "material": "Paper",
+        "classification": "Recyclable"
     },
     {
         "name": "Nutrition drink bottle",
         "material": "Glass",
-        "classification": "Recyclable (empty glass bottles)",
-        "instructions": "Wash out the inside with water and let dry. The cap goes into non-burnable."
+        "classification": "Recyclable",
+        "instructions": "Rinse and let dry. The cap goes is non-burnable."
     },
     {
-        "name": "Oil bottle ",
-        "material": "Plastic ",
+        "name": "Oil bottle",
+        "material": "Plastic",
         "classification": "Burnable",
-        "instructions": "Glass bottles go into non-burnable."
+        "instructions": "Glass bottles are non-burnable."
     },
     {
-        "name": "Oil bottle ",
+        "name": "Oil bottle",
         "material": "Metal / Glass",
         "classification": "Non-burnable",
-        "instructions": "Use up all of the oil first."
+        "instructions": "Remove all oil before disposal."
     },
     {
         "name": "Oil fan heater (kerosene)",
         "classification": "Oversized",
-        "instructions": "Those that fit in a bag are also classified as oversized. Empty all of the kerosene first. Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Even items that fit in a bag are classified as oversized. Empty all of the kerosene first. Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
         "name": "Oil / gas stove heater (kerosene)",
         "classification": "Oversized",
-        "instructions": "Those that fit in a bag are also classified as oversized. Empty all of the kerosene first. Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Even items that fit in a bag are classified as oversized. Empty all of the kerosene first. Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
         "name": "Oil / kerosene can (ittokan 18L drum)",
         "material": "Steel plates",
         "classification": "Non-burnable",
-        "instructions": "If there is a band around the can, take it off and put into burnable."
+        "instructions": "Remove any bands on the can and dispose of with burnable."
     },
     {
         "name": "Ozen legged tray",
         "material": "Plastic",
         "classification": "Non-burnable",
-        "instructions": "Those made of wood go into burnable."
+        "instructions": "Items made of wood go are burnable."
     },
     {
-        "name": "Package cushioning ",
+        "name": "Package cushioning",
         "material": "Plastic",
-        "classification": "Recyclable (plastic)"
+        "classification": "Recyclable"
     },
     {
         "name": "Package cushioning",
@@ -1326,7 +1322,7 @@
         "name": "Pail",
         "material": "Plastic",
         "classification": "Non-burnable",
-        "instructions": "Those that do not fit into the designated bag are classified as oversized.",
+        "instructions": "Items that do not fit into the designated bag are classified as oversized. Please consult with city hall",
         "contact": "0238-82-8007"
     },
     {
@@ -1335,9 +1331,10 @@
     },
     {
         "name": "Paint",
-        "material": "A small amount is acceptable. Paint onto paper or cloth.",
         "classification": "Burnable",
-        "instructions": "Not collectable in large quantities. Please consult with a professional. Paint cans go into non-burnable."
+        "instructions": "Items covered in paint are acceptable. Disposal of small amounts is also acceptable. Not collectable in large quantities. Please consult with a professional or with city hall. Paint cans are non-burnable.",
+        "contact": "0238-82-8007"
+        
     },
     {
         "name": "Paint containers ",
@@ -1362,13 +1359,13 @@
         "name": "Paper carton（non-white inside）",
         "material": "Paper",
         "classification": "Burnable",
-        "instructions": "Eg. Those for sake, whipping cream, etc."
+        "instructions": "Includes cartons for sake, whipping cream, etc."
     },
     {
         "name": "Paper carton（white inside）",
         "material": "Paper",
-        "classification": "Recyclable（used paper）",
-        "instructions": "Eg. Those for milk, etc. Wash inside and cut open. Spread flat and let dry."
+        "classification": "Recyclable",
+        "instructions": "Incluses milk cartons and similar items. Rinse completely, cut open and let dry."
     },
     {
         "name": "Paper fan ",
@@ -1383,7 +1380,7 @@
     {
         "name": "PC (including peripheral devices - mouse, keyboard, monitor)",
         "classification": "Small appliances",
-        "instructions": "Please direct any questions to the Citizen's Division of the city hall.",
+        "instructions": "Please consult with city hall",
         "contact": "0238-82-8007"
     },
     {
@@ -1399,32 +1396,36 @@
     {
         "name": "Pesticide bottle (empty)",
         "classification": "Non-burnable",
-        "instructions": "Those including chemical agents cannot be collected."
+        "instructions": "Items that contain chemical agents cannot be collected. Please consult with city hall.",
+        "contact": "0238-82-8007"
     },
     {
         "name": "Pesticides / agricultural chemicals",
         "classification": "Not collectable",
-        "instructions": "Please consult with place of purchase."
+        "instructions": "Please consult with place of purchase or with city hall."
     },
     {
         "name": "PET bottle",
-        "classification": "Recyclable（PET bottles）",
-        "instructions": "Wash inside and let dry. The cap and wrapping film go into recyclable plastic."
+        "material": "Polyethylene terephthalate",
+        "classification": "Recyclable",
+        "instructions": "Rinse and let dry. The cap and wrapping film are recyclable plastic."
     },
     {
         "name": "Pet food bag",
-        "classification": "Recyclable (plastic)",
-        "instructions": "Clean out first. Those that cannot be cleaned go into burnable."
+        "material": "Plastic",
+        "classification": "Recyclable",
+        "instructions": "Remove all remaining contents. Items that cannot be cleaned are burnable."
     },
     {
         "name": "Pet food can",
-        "classification": "Recyclable（empty cans）",
-        "instructions": "Wash and let dry first."
+        "material": "Metal",
+        "classification": "Recyclable",
+        "instructions": "Wash and let dry."
     },
     {
         "name": "Pet litter",
         "classification": "Burnable",
-        "instructions": "Remove any pet waste first."
+        "instructions": "Remove any pet waste."
     },
     {
         "name": "Pharmaceuticals",
@@ -1436,15 +1437,15 @@
         "classification": "Non-burnable"
     },
     {
-        "name": "Picture frame ",
+        "name": "Picture frame",
         "material": "Wood",
         "classification": "Burnable",
-        "instructions": "Take out the glass and put into non-burnable."
+        "instructions": "Remove the glass and dispose of with non-burnable."
     },
     {
         "name": "Pictures",
         "classification": "Burnable",
-        "instructions": "Negatives also go into burnable."
+        "instructions": "Film negatives are also burnable."
     },
     {
         "name": "Pillow",
@@ -1458,7 +1459,7 @@
         "name": "Planter",
         "material": "Plastic",
         "classification": "Non-burnable",
-        "instructions": "Cut up first."
+        "instructions": "Cut into smaller pieces before disposal."
     },
     {
         "name": "Planting prop ",
@@ -1475,15 +1476,16 @@
     {
         "name": "Planting stand",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
         "name": "Plastic bag",
-        "classification": "Recyclable (plastic)"
+        "material": "Plastic",
+        "classification": "Recyclable"
     },
     {
-        "name": "Plastic model ",
+        "name": "Plastic model",
         "material": "Plastic",
         "classification": "Non-burnable"
     },
@@ -1495,12 +1497,13 @@
     {
         "name": "Plate",
         "classification": "Non-burnable",
-        "instructions": "Wrap all items in newspaper, etc., even if unbroken.　"
+        "instructions": "Wrap all items in newspaper, etc., even if unbroken."
     },
     {
         "name": "Playground equipment for children",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup."
+        "instructions": "Please consult with city hall.",
+        "contact": "0238-82-8007"
     },
     {
         "name": "Polyurethane foam",
@@ -1516,14 +1519,14 @@
         "name": "Potty training toilet",
         "material": "Metal, plastic",
         "classification": "Non-burnable",
-        "instructions": "Those that do not fit into the designated bag are classified as oversized.",
+        "instructions": "Items that do not fit into the designated bag are classified as oversized. Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
         "name": "Printer（toner-type is non-burnable）",
         "material": "Inkjet only",
         "classification": "Small appliances",
-        "instructions": "Please direct any questions to the Citizen's Division of the city hall.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
@@ -1534,11 +1537,11 @@
     {
         "name": "Radio cassette",
         "classification": "Small appliances",
-        "instructions": "Please direct any questions to the Citizen's Division of the city hall.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
-        "name": "Raincoat ",
+        "name": "Raincoat",
         "material": "Rubber、nylon",
         "classification": "Burnable"
     },
@@ -1550,6 +1553,7 @@
     {
         "name": "Reception chair (for 1-2 people)",
         "classification": "Oversized",
+        "instructions": "Please consult with city hall",
         "contact": "0238-82-8007"
     },
     {
@@ -1559,19 +1563,19 @@
     {
         "name": "Record player",
         "classification": "Non-burnable",
-        "instructions": "Those which do not fit into the designated bag are classified as oversized.",
+        "instructions": "Items that do not fit into the designated bag are classified as oversized. Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
         "name": "Refill pack (shampoo, detergent)",
         "material": "Plastic",
-        "classification": "Burnable",
-        "instructions": "Too difficult to clean completely."
+        "classification": "Burnable"
     },
     {
         "name": "Refrigerator,  freezer",
         "classification": "Not collectable",
-        "instructions": "This is a recyclable home appliance. Please consult with place of purchase or the city hall."
+        "instructions": "This is a recyclable home appliance. Please consult with place of purchase or city hall.",
+        "contact": "0238-82-8007"
     },
     {
         "name": "Reusable water bottle / thermos",
@@ -1605,7 +1609,7 @@
     {
         "name": "Rubber eraser",
         "classification": "Burnable",
-        "instructions": "Plastic wrapper goes into recyclable plastic."
+        "instructions": "Plastic wrapper is recyclable plastic."
     },
     {
         "name": "Rubber hose",
@@ -1621,7 +1625,7 @@
     {
         "name": "Rug",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
@@ -1637,7 +1641,7 @@
     {
         "name": "Safe",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
@@ -1648,13 +1652,14 @@
     {
         "name": "Sake bottle",
         "material": "Glass",
-        "classification": "Recyclable（empty glass bottles）",
+        "classification": "Recyclable",
         "instructions": "Return isshobin (1.8L glass sake bottles) to the sake dealer or place of purchase."
     },
     {
         "name": "Sake bottle (isshobin / 1.8L)",
         "material": "Glass",
-        "instructions": "Return to the sake dealer or place of purchase, or give to the local kodomokai (children's association) for collection."
+        "classification": "Not collectable",
+        "instructions": "Return to the sake dealer or place of purchase, or bring to the local kodomokai (children's association) for collection."
     },
     {
         "name": "Sake kasu (rice wine lees)",
@@ -1667,7 +1672,7 @@
     {
         "name": "Sandbag (polymer type)",
         "classification": "Burnable",
-        "instructions": "Let any water dry out first."
+        "instructions": "Let dry completely before disposal."
     },
     {
         "name": "School bag",
@@ -1696,8 +1701,8 @@
     {
         "name": "Seasoning container",
         "material": "Glass",
-        "classification": "Recyclable（empty glass bottles）",
-        "instructions": "Broken / uncleaned items go into non-burnable. Wrap any broken items in newspaper, etc. and write \"割れ物″or \"ワレモノ\" on the outside."
+        "classification": "Recyclable",
+        "instructions": "Broken / uncleaned items are non-burnable. Wrap any broken items in newspaper, etc. and write \"割れ物″or \"ワレモノ\" on the outside."
     },
     {
         "name": "Seedling pot",
@@ -1707,7 +1712,7 @@
     {
         "name": "Sewing machine",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
@@ -1723,7 +1728,9 @@
     },
     {
         "name": "Sheets / sheet pad",
-        "classification": "Recyclable（cloth）"
+        "material": "Cloth",
+        "classification": "Recyclable",
+        "instructions": "Place in clear vinyl bag"
     },
     {
         "name": "Shellfish shells",
@@ -1736,7 +1743,7 @@
     {
         "name": "Shoe rack",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
@@ -1748,18 +1755,17 @@
         "name": "Shoes",
         "material": "Cotton、leather",
         "classification": "Burnable",
-        "instructions": "Including spiked shoes / cleats."
+        "instructions": "Includes spiked shoes / cleats."
     },
     {
         "name": "Shopping bag",
         "material": "Plastic",
-        "classification": "Burnable",
-        "instructions": "Too difficult to clean completely."
+        "classification": "Burnable"
     },
     {
         "name": "Shovel (up to 5 pieces)",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
@@ -1780,7 +1786,7 @@
         "name": "Skis / ski poles",
         "material": "Metal",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
@@ -1795,25 +1801,14 @@
     {
         "name": "Smart phone",
         "classification": "Small appliances",
-        "instructions": "Please direct any questions to the Citizen's Division of the city hall.",
+        "instructions": "Please consult with city hall or place of purchase.",
         "contact": "0238-82-8007"
     },
     {
         "name": "Snack container",
-        "material": "Metal",
-        "classification": "Recyclable（empty cans）"
-    },
-    {
-        "name": "Snack container ",
-        "material": "Paper",
-        "classification": "Recyclable（used paper）",
-        "instructions": "Those which cannot be cleaned go into burnable."
-    },
-    {
-        "name": "Snack container ",
-        "material": "Plastic",
-        "classification": "Recyclable (plastic)",
-        "instructions": "Those which cannot be cleaned go into burnable."
+        "material": "Metal, paper, plastic",
+        "classification": "Recyclable",
+        "instructions": "Paper and plastic items that cannot be cleaned are burnable."
     },
     {
         "name": "Snow brush",
@@ -1823,47 +1818,46 @@
     {
         "name": "Snow shovel / snow scoop",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall or place of purchase.",
         "contact": "0238-82-8007"
     },
     {
         "name": "Snowboard",
         "material": "Metal",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult city hall or place of purchase.",
         "contact": "0238-82-8007"
     },
     {
         "name": "Snow-melting agent",
         "material": "Calcium chloride",
         "classification": "Non-burnable",
-        "instructions": "A little at a time."
+        "instructions": "Dispose of this item a little at a time."
     },
     {
         "name": "Socks",
         "classification": "Burnable"
     },
     {
-        "name": "Sofa",
+        "name": "Sofa (no springs)",
         "classification": "Oversized",
-        "instructions": "No springs. Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
-        "name": "Softball",
-        "classification": "Non-burnable",
-        "instructions": "Same for baseballs (soft / hard)"
+        "name": "Softball (baseball)",
+        "classification": "Non-burnable"
     },
     {
         "name": "Soil",
         "classification": "Not collectable",
-        "instructions": "Please direct any questions to the Citizen's Division of the city hall.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
         "name": "Speaker",
         "classification": "Non-burnable",
-        "instructions": "If it does not fit into the designated bag, or it is heavy enough to break the bag, it is classified as oversized.",
+        "instructions": "If it does not fit into the designated bag, or it is heavy enough to break the bag, it is classified as oversized. Please consult with city hall",
         "contact": "0238-82-8007"
     },
     {
@@ -1880,32 +1874,32 @@
         "classification": "Burnable"
     },
     {
-        "name": "Spray can",
+        "name": "Spray can (aerosol can)",
         "material": "Metal",
         "classification": "Non-burnable",
-        "instructions": "Make a hole in the container and circle the opened area with a marker, etc.. Let the gas inside out completely."
+        "instructions": "Punch a hole in container to remove remaining gas. Circle punctured area with marker."
     },
     {
-        "name": "Spray can cap",
+        "name": "Spray can cap (aerosol spray)",
         "material": "Plastic",
-        "classification": "Recyclable (plastic)"
+        "classification": "Recyclable"
     },
     {
         "name": "Steel can (empty)",
         "material": "Metal",
-        "classification": "Recyclable (empty cans)"
+        "classification": "Recyclable"
     },
     {
         "name": "Steel shelves",
         "material": "Metal",
         "classification": "Non-burnable",
-        "instructions": "Those that do not fit into the designated bag are classified as oversized.",
+        "instructions": "Items that do not fit into the designated bag are classified as oversized. Please consult with city hall",
         "contact": "0238-82-8007"
     },
     {
         "name": "Stereo components / sound system",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall",
         "contact": "0238-82-8007"
     },
     {
@@ -1922,12 +1916,13 @@
         "name": "Stone weight",
         "material": "Stone, plastic",
         "classification": "Not collectable",
-        "instructions": "Cannot be thrown away as garbage."
+        "instructions": "Cannot be thrown away as garbage. Please consult with city hall",
+        "contact": "0238-82-8007"
     },
     {
         "name": "Stove heater (closed combustion)",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
@@ -1943,7 +1938,7 @@
     {
         "name": "Straw mat (goza)",
         "classification": "Burnable",
-        "instructions": "Cut into 50cm squares. Those that do not fit into the designated bag are classified as oversized.",
+        "instructions": "Cut into 50cm squares. Those that do not fit into the designated bag are classified as oversized. Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
@@ -1952,9 +1947,9 @@
     },
     {
         "name": "Styrofoam",
-        "material": "Container packaging plastic",
-        "classification": "Recyclable (plastic)",
-        "instructions": "Those that cannot be cleaned go into burnable."
+        "material": "Plastic",
+        "classification": "Recyclable",
+        "instructions": "Items that cannot be cleaned are burnable."
     },
     {
         "name": "Sunglasses",
@@ -1969,7 +1964,7 @@
     {
         "name": "Table, chest of drawers",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
@@ -1983,7 +1978,7 @@
     {
         "name": "Tarp",
         "classification": "Burnable",
-        "instructions": "Cut into 50cm squares and put into burnable. Any metal fittings on the corners go into non-burnable."
+        "instructions": "Cut into 50cm squares and dispose of with burnable. Any metal fittings on the corners are non-burnable."
     },
     {
         "name": "Taxidermied animal",
@@ -2010,12 +2005,12 @@
     {
         "name": "Telephone (landline)",
         "classification": "Small appliances",
-        "instructions": "Rotary dial-type phones go into non-burnable."
+        "instructions": "Rotary dial-type phones are non-burnable."
     },
     {
         "name": "Telescope",
         "classification": "Non-burnable",
-        "instructions": "Those that do not fit into the designated bag are classified as oversized.",
+        "instructions": "Items that do not fit into the designated bag are classified as oversized. Please consult with city hall",
         "contact": "0238-82-8007"
     },
     {
@@ -2027,7 +2022,7 @@
         "name": "Thermometer ",
         "material": "Digital type",
         "classification": "Non-burnable",
-        "instructions": "Remove any batteries and put out with hazardous waste."
+        "instructions": "Remove any batteries and dispose of with hazardous waste."
     },
     {
         "name": "Thermometer ",
@@ -2042,13 +2037,13 @@
     {
         "name": "Tiles",
         "classification": "Non-burnable",
-        "instructions": "If it is a large amount, please contact the Citizen's Division of the city hall.",
+        "instructions": "If disposing of large quantities, please consult with city hall",
         "contact": "0238-82-8007"
     },
     {
         "name": "Tires",
         "classification": "Not collectable",
-        "instructions": "Please consult with place of purchase."
+        "instructions": "Please consult with place of purchase or local dealership."
     },
     {
         "name": "Toaster",
@@ -2058,14 +2053,13 @@
     {
         "name": "Toaster oven",
         "classification": "Non-burnable",
-        "instructions": "Those which do not fit into the designated bag are classified as oversized.",
+        "instructions": "Items that do not fit into the designated bag are classified as oversized. Please consult with city hall",
         "contact": "0238-82-8007"
     },
     {
         "name": "Toilet detergent container",
         "material": "Plastic",
-        "classification": "Burnable",
-        "instructions": "Too difficult to clean completely."
+        "classification": "Burnable"
     },
     {
         "name": "Toner cartridge",
@@ -2079,19 +2073,19 @@
     {
         "name": "Toothbrush tube",
         "material": "Plastic",
-        "classification": "Burnable",
-        "instructions": "Too difficult to clean completely."
+        "classification": "Burnable"
     },
     {
-        "name": "Towel blanket ",
+        "name": "Towel blanket",
         "material": "Cloth",
-        "classification": "Recyclable（cloth）"
+        "classification": "Recyclable",
+        "instructions": "Place in clear vinyl bag."
     },
     {
         "name": "Toys",
         "material": "Plastic",
         "classification": "Non-burnable",
-        "instructions": "Those made out of wood go into burnable."
+        "instructions": "Items made out of wood are burnable."
     },
     {
         "name": "Tray",
@@ -2099,10 +2093,10 @@
         "classification": "Non-burnable"
     },
     {
-        "name": "Tray",
-        "material": "Styrofoam",
-        "classification": "Recyclable (plastic)",
-        "instructions": "Those that cannot be cleaned go into burnable."
+        "name": "Tray (styrofoam)",
+        "material": "Plastic",
+        "classification": "Recyclable",
+        "instructions": "Items that cannot be cleaned are burnable."
     },
     {
         "name": "Tree branches",
@@ -2117,7 +2111,7 @@
     {
         "name": "Tricycle",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall",
         "contact": "0238-82-8007"
     },
     {
@@ -2127,30 +2121,31 @@
     {
         "name": "TV (LCD / CRT type)",
         "classification": "Not collectable",
-        "instructions": "This is a recyclable home appliance. Please consult with place of purchase or the city hall."
+        "instructions": "This is a recyclable home appliance. Please consult with place of purchase or city hall."
     },
     {
         "name": "TV antenna (for broadcast sattellite / BS)",
-        "classification": "Small appliances",
-        "instructions": "Please direct any questions to the Citizen's Division of the city hall.",
+        "classification": "Not collectable",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
         "name": "TV tuner (broadcast sattellite / BS)",
         "classification": "Small appliances",
-        "instructions": "Please direct any questions to the Citizen's Division of the city hall.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
         "name": "Umbrella",
         "classification": "Non-burnable",
-        "instructions": "Those that do not fit into the designated bag are classified as oversized.",
+        "instructions": "Items that do not fit into the designated bag are classified as oversized. Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
         "name": "Vacuum cleaner",
         "classification": "Non-burnable",
-        "instructions": "Cut the cord/hose into 50cm segments. Those that do not fit into the designated bag are classified as oversized."
+        "instructions": "Cut the cord/hose into 50cm segments. Items that do not fit into the designated bag are classified as oversized. Please consult with city hall.",
+        "contact": "0238-82-8007"
     },
     {
         "name": "Vacuum cleaner filter",
@@ -2160,38 +2155,38 @@
     {
         "name": "Vanity",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
         "name": "Vase",
         "material": "Glass, ceramic",
         "classification": "Non-burnable",
-        "instructions": "Wrap any broken items in newspaper, etc. and write \"割れ物″or \"ワレモノ″(broken items) on the outside."
+        "instructions": "Wrap any broken items in newspaper. Write \"割れ物″or \"ワレモノ″(broken items) on the outside."
     },
     {
         "name": "Ventilation fan",
         "material": "Plastic",
         "classification": "Non-burnable",
-        "instructions": "Those that do not fit into the designated bag are classified as oversized.",
+        "instructions": "Those that do not fit into the designated bag are classified as oversized. Please consult with city hall",
         "contact": "0238-82-8007"
     },
     {
         "name": "Video camera",
         "classification": "Small appliances",
-        "instructions": "Please direct any questions to the Citizen's Division of the city hall. Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall or place of purchase",
         "contact": "0238-82-8007"
     },
     {
         "name": "Video game console",
         "classification": "Small appliances",
-        "instructions": "Please direct any questions to the Citizen's Division of the city hall.Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall or place of purchase",
         "contact": "0238-82-8007"
     },
     {
         "name": "Video player / VCR",
         "classification": "Small appliances",
-        "instructions": "Please direct any questions to the Citizen's Division of the city hall. Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall place of purchase",
         "contact": "0238-82-8007"
     },
     {
@@ -2212,7 +2207,7 @@
     {
         "name": "Vinyl sheet",
         "classification": "Burnable",
-        "instructions": "Cut into 50cm squares and put into burnable. Any metal fittings on the corners go into non-burnable."
+        "instructions": "Cut into 50cm squares and put into burnable. Any metal fittings on the corners are non-burnable."
     },
     {
         "name": "Wallet",
@@ -2227,7 +2222,8 @@
     {
         "name": "Washing machine",
         "classification": "Not collectable",
-        "instructions": "This is a recyclable home appliance. Please consult with place of purhcase or the city hall."
+        "instructions": "This is a recyclable home appliance. Please consult with place of purhcase or city hall.",
+        "contact": "0238-82-8007"
     },
     {
         "name": "Washing machine hose",
@@ -2235,10 +2231,9 @@
         "instructions": "Cut into 50cm segments."
     },
     {
-        "name": "Water boiler",
+        "name": "Water boiler (for gas stovetop)",
         "material": "Metal",
-        "classification": "Non-burnable",
-        "instructions": "For gas stovetop."
+        "classification": "Non-burnable"
     },
     {
         "name": "Watering can",
@@ -2248,18 +2243,19 @@
     {
         "name": "Wave galvanized iron (up to 5 sheets)",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall",
         "contact": "0238-82-8007"
     },
     {
         "name": "Whiskey bottle",
         "material": "Glass",
-        "classification": "Recyclable（glass bottles）",
+        "classification": "Recyclable",
         "instructions": "Wrap any broken glass in newspaper, etc. and write \"割れ物″or \"ワレモノ″(broken items) on the outside."
     },
     {
         "name": "Wine bottle",
-        "classification": "Recyclable（open glass bottles）"
+        "material": "Glass",
+        "classification": "Recyclable"
     },
     {
         "name": "Wine cork",
@@ -2278,17 +2274,17 @@
     {
         "name": "Wood chips",
         "classification": "Burnable",
-        "instructions": "Only those which were produced at your house."
+        "instructions": "Only those which were produced at your residence can be disposed of."
     },
     {
         "name": "Wood shavings",
         "classification": "Burnable",
-        "instructions": "Only those which were produced at your house."
+        "instructions": "Only those which were produced at your residence can be disposed of."
     },
     {
         "name": "Word processor",
         "classification": "Small appliances",
-        "instructions": "Please direct any questions to the Citizen's Division of the city hall.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
@@ -2297,9 +2293,9 @@
         "classification": "Burnable"
     },
     {
-        "name": "Wristwatch",
+        "name": "Wrist watch",
         "classification": "Non-burnable",
-        "instructions": "If there is a battery inside, remove it and put with hazardous waste."
+        "instructions": "Remove batteries and dispose of with hazardous waste"
     },
     {
         "name": "Writing brush ",
@@ -2315,14 +2311,14 @@
         "name": "Zabuton cushion",
         "material": "Cotton",
         "classification": "Burnable",
-        "instructions": "Cut into 50cm squares. Those that do not fit into the designated bag are classified as oversized.",
+        "instructions": "Cut into 50cm squares. Items that do not fit into the designated bag are classified as oversized. Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
         "name": "Zabuton cushion (up to 5 pieces)",
         "material": "Cotton",
         "classification": "Oversized",
-        "instructions": "Please consult city hall for disposal instructions or schedule a pickup.",
+        "instructions": "Please consult with city hall.",
         "contact": "0238-82-8007"
     },
     {
