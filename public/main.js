@@ -1,24 +1,13 @@
-const paperImage = '1024px-Recycling_kami.svg.png'
 const classificationTypes = document.querySelectorAll('.classTypes')
-
-let timer;
+const headers = document.querySelectorAll('.headers')
+let markImage = document.getElementById('markImg').src;
+let bagImage = document.getElementById('bagImg').src;
 
 let itemName;
 let classification;
 let instructions;
 let material;
 let contact;
-
-// document.addEventListener('input', e => {
-//   const el = e.target;
-  
-//   if( el.matches('[data-color]') ) {
-//     clearTimeout(timer);
-//     timer = setTimeout(() => {
-//       document.documentElement.style.setProperty(`--color-${el.dataset.color}`, el.value);
-//     }, 100)
-//   }
-// })
 
 $(document).ready(function () {
   $("#name").autocomplete({
@@ -58,15 +47,26 @@ $(document).ready(function () {
           contact = result.contact
 
           $("#itemName").text(itemName);
-          instructions && $("#instructions").text(instructions);
-          material && $("#material").text(material);
+
+          if(instructions){
+            $('#instructionsHeader').toggleClass('hidden')
+            $("#instructions").text(instructions)
+          }
+
+          if(material){
+            $('#materialHeader').toggleClass('hidden')
+            $("#material").text(material)
+          }
+
+          // instructions && $("#instructions").text(instructions);
+          // material && $("#material").text(material) && document.querySelector('.itemMaterial').toggleClass('hidden');
 
           checkForContact()
+          checkForBurnable()
 
           contact && $("#contactNumber").text(contact);
           if (classification == "Burnable") {
             $('#burnable').toggleClass('hidden')
-            // $('img').attr('src', paperImage)
           } else if(classification == 'Non-burnable'){
             $('#nonburnable').toggleClass('hidden')
           } else if(classification == 'Recyclable'){
@@ -87,14 +87,35 @@ $(document).ready(function () {
 function checkForContact(){
   if(contact){
     document.getElementById('contactInfo').classList.add('show-contact')
+    document.getElementById('xmark').addEventListener('click', ()=>{
+      document.getElementById('contactInfo').classList.remove('show-contact')
+    })
   }else{
     document.getElementById('contactInfo').classList.remove('show-contact')
   }
 }
+
+//Check each search for classification === burnable and burnable bag
+//If !recyclable then hide bag and mark
+function checkForBurnable(){
+  if(classification !== 'Burnable'){
+    document.querySelector('.bagContainer').classList.add('hidden')
+  }else{
+    document.querySelector('.bagContainer').classList.toggle('hidden')
+    bagImage = 'public/burnablebag.jpg'
+  }
+}
+
 
 //hide all classification type info at the beginning of each new search
 function reAddClassHidden(){
   classificationTypes.forEach(type=>{
     type.classList.add('hidden')
   })
+
+  headers.forEach(header=> {
+    header.classList.add('hidden')
+  })
 }
+
+//hide all classification type info at the beginning of each new search

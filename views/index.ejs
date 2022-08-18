@@ -37,59 +37,68 @@
         <!-- <ul id="test"></ul> -->
       </section>
 
-      <section class="info hidden" id="info">
-        
-        <div>
-          <h3 class="itemName" id="itemName"></h3>
-        </div>
-          
-        <div class="burnableDistinction">
-          <!-- <h4 class="burnableDistinction">Burnable:  -->
+      <section class="middleSectionContainer">
 
-            <div class="burnable hidden classTypes" id="burnable">
-              <h4 class="yes" id="yes">Burnable</h4>
-              <i class="fa-solid fa-fire fireIcon" id="fireIcon"></i>
-            </div>
+        <section class="info hidden" id="info">
 
-            <div class="nonburnable hidden classTypes" id="nonburnable">
-              <h4 class="no" id="no">Non-burnable</h4>
-              <i class="fa-solid fa-xmark xmark"></i>
-            </div>
+          <div>
+            <h3 class="itemName" id="itemName"></h3>
+          </div>
 
-            <div class="recyclable hidden classTypes" id="recyclable">
-              <h4 class="recycleTitle" id="recycleTitle">Recyclable</h4>
-              <i class="fa-solid fa-recycle recycleMark"></i>
-            </div>
+          <div class="burnableDistinction">
+            <!-- <h4 class="burnableDistinction">Burnable:  -->
 
-            <div class="nonCollectable hidden classTypes" id="nonCollectable">
-              <h4 class="nonCollectableTitle" id="nonCollectableTitle">Not collectable</h4>
-              <i class="fa-solid fa-ban"></i>
-            </div>
+              <div class="burnable hidden classTypes" id="burnable">
+                <h4 class="yes" id="yes">Burnable</h4>
+                <i class="fa-solid fa-fire fireIcon" id="fireIcon"></i>
+              </div>
 
-            <div class="overSize hidden classTypes" id="overSize">
-              <h4 class="overSizeTitle" id="overSizeTitle">Oversized</h4>
-              <i class="fa-solid fa-weight-scale"></i>
-            </div>
-        </div>
+              <div class="nonburnable hidden classTypes" id="nonburnable">
+                <h4 class="no" id="no">Non-burnable</h4>
+                <i class="fa-solid fa-xmark xmark"></i>
+              </div>
 
-        <div>
-          <h4 class="itemMaterial" id="itemMaterial">Material:</h4>
-          <p class="material" id="material"></p>
-        </div>
-          
-        <div>
-          <h4 class="instructionsHeader">Instructions:</h5>
-          <p class="instructions" id="instructions"></p>
-        </div>
+              <div class="recyclable hidden classTypes" id="recyclable">
+                <h4 class="recycleTitle" id="recycleTitle">Recyclable</h4>
+                <i class="fa-solid fa-recycle recycleMark"></i>
+              </div>
 
-        <!-- <div class="iconContainer">
-          <img src="" />
-        </div> -->
-      </section>
+              <div class="nonCollectable hidden classTypes" id="nonCollectable">
+                <h4 class="nonCollectableTitle" id="nonCollectableTitle">Not collectable</h4>
+                <i class="fa-solid fa-ban"></i>
+              </div>
+
+              <div class="overSize hidden classTypes" id="overSize">
+                <h4 class="overSizeTitle" id="overSizeTitle">Oversized</h4>
+                <i class="fa-solid fa-weight-scale"></i>
+              </div>
+          </div>
+
+          <div class ="hidden headers" id="materialHeader">
+            <h4 class="materialHeader">Material:</h4>
+            <p class="material" id="material"></p>
+          </div>
+
+          <div class="hidden headers" id="instructionsHeader">
+            <h4 class="instructionsHeader">Instructions:</h5>
+            <p class="instructions" id="instructions"></p>
+          </div>
+
+        </section>
+
+        <section class="markContainer hidden">
+            <img src="300px-Recycling_steel.svg.png" class="markImg" id="markImg"/>
+        </section>
+
+        <section class="bagContainer hidden">
+          <img src="burnablebag.jpg" class="bagImg" id="bagImg"/>
+        </section>
+    </section>
     
     </section>
 
     <div class="contactInfo" id="contactInfo">
+      <i class="fa-solid fa-circle-xmark" id="xmark"></i>
       <h5 class="specialOrOversize">This is a special or oversize item.</h5>
       <p class="contactExplanation">It may be necessary for you to call Nagai City Hall for more information.</p>
       <h3 class="phoneNumber" id="contactNumber"></h3>
