@@ -7,6 +7,23 @@
     font-family: 'Raleway', sans-serif;
 }
 
+#banner{
+    max-width: 56vh;
+    max-height: 60vh;
+    margin-top: 5vh;
+}
+
+.hero{
+    display: flex;
+    justify-content: center;
+}
+
+body{
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 14%, rgba(0,212,255,1) 74%);
+    background-repeat: no-repeat;
+    height: 140vh;
+}
+
 .container{
     margin: 6rem auto;
     width: 60vw;
