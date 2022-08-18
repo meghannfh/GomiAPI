@@ -13,7 +13,7 @@
     margin-top: 5vh;
 }
 
-.hero{
+/* .hero{
     display: flex;
     justify-content: center;
 }
@@ -22,7 +22,7 @@ body{
     background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 14%, rgba(0,212,255,1) 74%);
     background-repeat: no-repeat;
     height: 140vh;
-}
+} */
 
 .container{
     margin: 6rem auto;
@@ -242,8 +242,7 @@ body{
 /*BEGIN MEDIA QUERIES*/
 @media screen and (max-width: 768px) {
     .middleSectionContainer{
-        width: 90vw;
-        grid-template-columns: repeat(1, 1fr);
+        flex-direction: column;
     }
 }
 

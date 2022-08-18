@@ -1,5 +1,6 @@
 const classificationTypes = document.querySelectorAll('.classTypes')
 const headers = document.querySelectorAll('.headers')
+const images = document.querySelectorAll('.images')
 let markImage = document.getElementById('markImg').src;
 let bagImage = document.getElementById('bagImg').src;
 
@@ -29,6 +30,7 @@ $(document).ready(function () {
     select: function (event, ui) {
 
       reAddClassHidden()
+      bagImage = ''
 
       $("#instructions").text('')
       $("#material").text('')
@@ -62,19 +64,26 @@ $(document).ready(function () {
           // material && $("#material").text(material) && document.querySelector('.itemMaterial').toggleClass('hidden');
 
           checkForContact()
-          checkForBurnable()
 
           contact && $("#contactNumber").text(contact);
+
           if (classification == "Burnable") {
             $('#burnable').toggleClass('hidden')
+            $('#bagContainer').toggleClass('hidden')
+            bagImage = 'public/burnablebag.jpg'
+
           } else if(classification == 'Non-burnable'){
             $('#nonburnable').toggleClass('hidden')
+
           } else if(classification == 'Recyclable'){
             $('#recyclable').toggleClass('hidden')
+
           } else if(classification == 'Not collectable'){
             $('#nonCollectable').toggleClass('hidden')
+
           } else if(classification == 'Oversized'){
             $('#overSize').toggleClass('hidden')
+          
           }
         });
     },
@@ -95,17 +104,6 @@ function checkForContact(){
   }
 }
 
-//Check each search for classification === burnable and burnable bag
-//If !recyclable then hide bag and mark
-function checkForBurnable(){
-  if(classification !== 'Burnable'){
-    document.querySelector('.bagContainer').classList.add('hidden')
-  }else{
-    document.querySelector('.bagContainer').classList.toggle('hidden')
-    bagImage = 'public/burnablebag.jpg'
-  }
-}
-
 
 //hide all classification type info at the beginning of each new search
 function reAddClassHidden(){
@@ -116,6 +114,8 @@ function reAddClassHidden(){
   headers.forEach(header=> {
     header.classList.add('hidden')
   })
-}
 
-//hide all classification type info at the beginning of each new search
+  images.forEach(image => {
+    image.classList.add('hidden')
+  })
+}
