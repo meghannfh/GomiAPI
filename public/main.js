@@ -55,25 +55,9 @@ $(document).ready(function () {
           material && $('#materialHeader').toggleClass('hidden') && $("#material").text(material)
           contact && $("#contactNumber").text(contact);
 
+          checkClassification()
           checkForContact()
-          addBag()
-
-          if (classification === "Burnable") {
-            $('#burnable').toggleClass('hidden')
-
-          } else if(classification === 'Non-burnable'){
-            $('#nonburnable').toggleClass('hidden')
-
-          } else if(classification == 'Recyclable'){
-            $('#recyclable').toggleClass('hidden')
-
-          } else if(classification == 'Not collectable'){
-            $('#nonCollectable').toggleClass('hidden')
-
-          } else if(classification === 'Oversized'){
-            $('#overSize').toggleClass('hidden')
-          
-          }
+          addBagImg()
 
         });
     },
@@ -94,9 +78,6 @@ function checkForContact(){
   }
 }
 
-//Check for 
-
-
 //hide all classification type info at the beginning of each new search
 function reAddClassHidden(){
   classificationTypes.forEach(type=>{
@@ -112,12 +93,34 @@ function reAddClassHidden(){
   })
 }
 
-function addBag(){
-  if(classification.toLowerCase() === 'burnable'){
+function addBagImg(){
+  if(classification === 'Burnable'){
     $('#bagContainer').toggleClass('hidden')
     bagImage.src = 'burnablebag.jpg'
-  }else if(classification.toLowerCase() === 'non-burnable'){
+  }else if(classification === 'Non-burnable'){
     $('#bagContainer').toggleClass('hidden')
     bagImage.src = 'nonburnablebag.jpg'
+  }else if(material.includes('Plastic')){
+    $('#bagContainer').toggleClass('hidden')
+    bagImage.src = 'plasticsbag.jpg'
+  }
+}
+
+function checkClassification(){
+  if (classification === "Burnable") {
+    $('#burnable').toggleClass('hidden')
+
+  } else if(classification === 'Non-burnable'){
+    $('#nonburnable').toggleClass('hidden')
+
+  } else if(classification == 'Recyclable'){
+    $('#recyclable').toggleClass('hidden')
+
+  } else if(classification == 'Not collectable'){
+    $('#nonCollectable').toggleClass('hidden')
+
+  } else if(classification === 'Oversized'){
+    $('#overSize').toggleClass('hidden')
+  
   }
 }
