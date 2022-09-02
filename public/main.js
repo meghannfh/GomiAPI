@@ -1,8 +1,8 @@
 const classificationTypes = document.querySelectorAll('.classTypes')
 const headers = document.querySelectorAll('.headers')
 const images = document.querySelectorAll('.images')
-let markImage = document.getElementById('markImg').src;
-let bagImage = document.getElementById('bagImg').src;
+let markImage = document.getElementById('markImg');
+let bagImage = document.getElementById('bagImg');
 
 let itemName;
 let classification;
@@ -29,50 +29,39 @@ $(document).ready(function () {
     minLength: 2,
     select: function (event, ui) {
 
-      reAddClassHidden()
-      bagImage = ''
+      reAddClassHidden()//reset class hidden on classification types, headers and images after each search
+      $("#itemName").text('')//empty item name text for each new search
+      $("#instructions").text('')//empty instructions text 
+      $("#material").text('')//empty material text
 
-      $("#instructions").text('')
-      $("#material").text('')
       console.log(ui.item.id);
       fetch(`http://localhost:3001/get/${ui.item.id}`)
         .then((response) => response.json())
         .then((result) => {
           console.log(result);
-          $("#info").removeClass('hidden')
-          $("#name").val('')
 
-          itemName = result.name
-          classification = result.classification
-          material = result.material
-          instructions = result.instructions
-          contact = result.contact
+          $("#info").removeClass('hidden')//reveal information box after selection is picked
+          $("#name").val('')//empty the input again
 
-          $("#itemName").text(itemName);
+          
+          itemName = result.name//set item name and to lowercase
+          classification = result.classification//set classification
+          material = result.material//set material
+          instructions = result.instructions//set instructions
+          contact = result.contact//set contact
 
-          if(instructions){
-            $('#instructionsHeader').toggleClass('hidden')
-            $("#instructions").text(instructions)
-          }
-
-          if(material){
-            $('#materialHeader').toggleClass('hidden')
-            $("#material").text(material)
-          }
-
-          // instructions && $("#instructions").text(instructions);
-          // material && $("#material").text(material) && document.querySelector('.itemMaterial').toggleClass('hidden');
-
-          checkForContact()
-
+          itemName && $("#itemName").text(itemName);
+          instructions && $('#instructionsHeader').toggleClass('hidden') && $("#instructions").text(instructions)
+          material && $('#materialHeader').toggleClass('hidden') && $("#material").text(material)
           contact && $("#contactNumber").text(contact);
 
-          if (classification == "Burnable") {
-            $('#burnable').toggleClass('hidden')
-            $('#bagContainer').toggleClass('hidden')
-            bagImage = 'public/burnablebag.jpg'
+          checkForContact()
+          addBag()
 
-          } else if(classification == 'Non-burnable'){
+          if (classification === "Burnable") {
+            $('#burnable').toggleClass('hidden')
+
+          } else if(classification === 'Non-burnable'){
             $('#nonburnable').toggleClass('hidden')
 
           } else if(classification == 'Recyclable'){
@@ -81,10 +70,11 @@ $(document).ready(function () {
           } else if(classification == 'Not collectable'){
             $('#nonCollectable').toggleClass('hidden')
 
-          } else if(classification == 'Oversized'){
+          } else if(classification === 'Oversized'){
             $('#overSize').toggleClass('hidden')
           
           }
+
         });
     },
   });
@@ -104,6 +94,8 @@ function checkForContact(){
   }
 }
 
+//Check for 
+
 
 //hide all classification type info at the beginning of each new search
 function reAddClassHidden(){
@@ -118,4 +110,14 @@ function reAddClassHidden(){
   images.forEach(image => {
     image.classList.add('hidden')
   })
+}
+
+function addBag(){
+  if(classification.toLowerCase() === 'burnable'){
+    $('#bagContainer').toggleClass('hidden')
+    bagImage.src = 'burnablebag.jpg'
+  }else if(classification.toLowerCase() === 'non-burnable'){
+    $('#bagContainer').toggleClass('hidden')
+    bagImage.src = 'nonburnablebag.jpg'
+  }
 }
