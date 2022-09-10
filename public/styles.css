@@ -16,19 +16,20 @@
 /* .hero{
     display: flex;
     justify-content: center;
-}
+}*/
 
 body{
-    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 14%, rgba(0,212,255,1) 74%);
-    background-repeat: no-repeat;
-    height: 140vh;
-} */
+    background: linear-gradient(116.31deg, rgba(255, 235, 58, 0.41) 5.27%, rgba(127, 213, 42, 0.668) 46.95%, #0da98295 94.86%) no-repeat;
+    height: 100vh;
+} 
 
 .container{
-    margin: 6rem auto;
+    margin: 4rem auto;
     width: 60vw;
     padding: calc(.5rem * 1.5) .5rem;
-    border: 1px solid red;
+    border-radius: 20px;
+    border: 1.5px solid rgb(83, 83, 83);
+    background-color: white;
 }
 
 .searchContainer{
@@ -73,7 +74,6 @@ body{
     /* margin-top: calc(.5rem * 1.5);
     padding: calc(.5rem * 1.5) .5rem;
     border-radius: 15px; */
-    border: 1px solid green;
 }
 
 .markContainer,
@@ -81,8 +81,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid purple;
     max-width: 25%;
+    border-radius: 10px;
+    border: 1.5px solid rgb(83, 83, 83);
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .markImg{
@@ -90,7 +93,8 @@ body{
 }
 
 .bagImg {
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -126,7 +130,7 @@ body{
 
 .input__field:focus + .input__label, .input__field:not(:placeholder-shown) + .input__label {
     transform: translate(0.25rem, -65%) scale(0.8);
-    color: #008c8a;
+    color: #1a1a1a;
 }
 
 /*END UP INPUT STYLES*/
@@ -242,35 +246,11 @@ body{
     color: black;
 }
 
-#phoneIcon:hover {
-    display: inline-block;
-    animation: rotation .7s linear;
-  }
-  
-  @keyframes rotation {
-    0% {
-      transform: rotate(-40deg);
-    }
-    25% {
-      transform: rotate(-20deg);
-    }
-    50% {
-        transform: rotate(-40deg);
-    }
-    75% {
-        transform: rotate(-20deg);
-    }
-    100% {
-        transform: rotate(-40deg);
-    }
-  }
-
 /*CONTACT INFO END*/
 
 /*Contributors and FOOTER*/
 
 footer{
-    border: 1px solid red;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -279,47 +259,120 @@ footer{
 
 .displayContributors{
     position: fixed;
-    right: 2%;
-    bottom: 5%;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;;
-    background-color: #008c8a;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    right: 1%;
+    bottom: 1%;
+    border-radius: 5px;
+    background-color: white;
+    color:black;
+    border: .5px solid rgb(83, 83, 83);
+}
+
+.displayContributors:hover{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.displayContributors p{
+    font-weight: 400;
+    display: flex;
+    align-self: center;
+    padding: .5rem;
 }
 
 .contributorsContainer{
     width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    gap:1rem;
-    align-items: center;
-}
-
-.contributorImg{
-    width: 10rem;
-    display: flex;
+    gap: .3rem;
     flex-direction: row;
     align-items: center;
-    gap: .5rem;
 }
 
-.contributorImg img{
-    padding: .05rem;
-    /* border: 1px solid rgb(75, 75, 75); */
+.addbg{
+    background-color: #008c8a;
+}
+
+/*Contributors STYLES AND ANIMATION*/
+.parent {
+    position: relative;
+    height: 55px;
+    width: 55px;
+    transition: width 1s;
+    overflow: hidden;
+}
+
+.textcover{
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    z-index: 2;
+    transition: width 1s ease-out;
+}
+
+.text{
+    position: absolute;
+    text-align: right;
+    top: 0;
+    right: 0;
+    padding-top: .3rem;
     width: 100%;
     height: auto;
-    border: 3px solid #008c8a;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
 }
 
-.contributorImg p{
+/*HIDE TEXT*/
+.hide{
+    visibility: hidden;
+}
+
+.text h6{
+    font-size: .8rem;
+}
+.text p{
     font-size: .7rem;
 }
 
+.child{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    transition: transform 1s;
+    z-index: 3;
+}
+
+.child img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.parent:hover{
+    width: 115px;
+}
+
+.parent:hover .child{
+    transform: translateX(-100%);
+}
+
+.parent:hover .textcover{
+    animation: width 1s ease-out forwards;
+}
+
+@keyframes width{
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+    }
+
+}
 
 
 /*BEGIN MEDIA QUERIES*/

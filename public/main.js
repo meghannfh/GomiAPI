@@ -3,6 +3,7 @@ const headers = document.querySelectorAll('.headers')
 const images = document.querySelectorAll('.images')
 let markImage = document.getElementById('markImg');
 let bagImage = document.getElementById('bagImg');
+const textParent = document.querySelectorAll('.parent')
 
 let itemName;
 let classification;
@@ -106,6 +107,9 @@ function addBagImg(){
   }else if(material.includes('Plastic')){
     $('#bagContainer').toggleClass('hidden')
     bagImage.src = 'assets/plasticsbag.jpg'
+  }else if(material.includes('Paper')){
+    $('#bagContainer').toggleClass('hidden')
+    bagImage.src = 'assets/paperRope.png'
   }
 }
 
@@ -148,6 +152,11 @@ function addMark(){
     }else if(material === 'Metal'){
       $('#markContainer').toggleClass('hidden')
       markImage.src = 'assets/steel.svg.png'
+      $('#bagContainer').toggleClass('hidden')
+      bagImage.src = 'assets/clearvinylbag.jpg'
+    }else if(material === 'Glass'){
+      $('#markContainer').toggleClass('hidden')
+      markImage.src = 'assets/glass.png'
     }
   }else if(classification === !'Recyclable'){
     $('#markContainer').toggleClass('hidden')
