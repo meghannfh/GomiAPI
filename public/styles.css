@@ -7,11 +7,11 @@
     font-family: 'Raleway', sans-serif;
 }
 
-#banner{
+/* #banner{
     max-width: 56vh;
     max-height: 60vh;
     margin-top: 5vh;
-}
+} */
 
 /* .hero{
     display: flex;
@@ -126,7 +126,7 @@ body{
 
 .input__field:focus + .input__label, .input__field:not(:placeholder-shown) + .input__label {
     transform: translate(0.25rem, -65%) scale(0.8);
-    color: #fa2a00;
+    color: #008c8a;
 }
 
 /*END UP INPUT STYLES*/
@@ -201,16 +201,16 @@ body{
     flex-direction: column;
     align-items: center;
     /* border: 1px solid rgb(51, 51, 51); */
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 10px;
     padding: calc(.5rem * 1.5) .5rem;
     transition: all .2s;
 }
 
 .fa-circle-xmark{
     position:absolute;
-    top: 0rem;
-    right: -0.2rem;
+    top: .5rem;
+    right: .5rem;
 }
 
 .fa-circle-xmark:hover{
@@ -220,7 +220,7 @@ body{
 
 /*show contact info*/
 .show-contact {
-    bottom: 5%;
+    bottom: 30%;
   }
 
 .specialOrOversize{
@@ -235,9 +235,92 @@ body{
 
 .phoneIcon{
     font-size: 2rem;
+    transform: rotate(-40deg);
 }
 
+.callContact{
+    color: black;
+}
+
+#phoneIcon:hover {
+    display: inline-block;
+    animation: rotation .7s linear;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(-40deg);
+    }
+    25% {
+      transform: rotate(-20deg);
+    }
+    50% {
+        transform: rotate(-40deg);
+    }
+    75% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(-40deg);
+    }
+  }
+
 /*CONTACT INFO END*/
+
+/*Contributors and FOOTER*/
+
+footer{
+    border: 1px solid red;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+}
+
+.displayContributors{
+    position: fixed;
+    right: 2%;
+    bottom: 5%;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;;
+    background-color: #008c8a;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.contributorsContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:1rem;
+    align-items: center;
+}
+
+.contributorImg{
+    width: 10rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5rem;
+}
+
+.contributorImg img{
+    padding: .05rem;
+    /* border: 1px solid rgb(75, 75, 75); */
+    width: 100%;
+    height: auto;
+    border: 3px solid #008c8a;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+
+.contributorImg p{
+    font-size: .7rem;
+}
+
+
 
 /*BEGIN MEDIA QUERIES*/
 @media screen and (max-width: 768px) {

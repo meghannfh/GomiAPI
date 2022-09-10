@@ -5,7 +5,7 @@ const cors = require("cors");
 const { response } = require("express");
 // const { request } = require("http")
 // const ejs = require('ejs')
-require("dotenv").config();
+require('dotenv').config({ path: './config/.env' })
 
 const PORT = 3001;
 
@@ -16,13 +16,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 let db;
-(dbName = "garbage-disposal-api"), (dbConnectionStr = 'mongodb+srv://gomisorter:LJpMVxeGPYsSAGfg@cluster0.nf9ipwl.mongodb.net/?retryWrites=true&w=majority');
+// let dbName = "garbage-disposal-api"
+let dbName = "nagaiGomi2"
+let dbConnectionStr = process.env.DB_STRING2
 
 MongoClient.connect(dbConnectionStr)
 .then(
   (client) => {
     console.log(`Connected to ${dbName} Database`);
-    db = client.db("garbage-disposal-api");
+    db = client.db("nagaiGomi2");
   }
 );
 
@@ -33,7 +35,7 @@ app.get("/", (req, res) => {
 app.get("/search", async (request, response) => {
   try {
     // console.log(req.query);
-    let result = await db.collection("nagai-city-data").aggregate([
+    let result = await db.collection("nagai-gomi").aggregate([
         {
           "$search": {
             "autocomplete": {
@@ -57,7 +59,7 @@ app.get("/search", async (request, response) => {
 app.get("/get/:id", async (request, response) => {
   try {
     console.log(request.params);
-    let result = await db.collection("nagai-city-data").findOne({
+    let result = await db.collection("nagai-gomi").findOne({
       "_id": ObjectId(request.params.id)
     });
     console.log(result);
@@ -66,16 +68,6 @@ app.get("/get/:id", async (request, response) => {
     response.status(500).send({ message: error.message });
   }
 });
-
-// app.post("/garbages", (req, res) => {
-//   quotesCollection
-//     .insertOne(req.body)
-//     .then((result) => {
-//       console.log(result);
-//       res.redirect("/");
-//     })
-//     .catch((error) => console.error(error));
-// });
 
 app.listen(process.env.PORT || PORT, () => {
   console.log("Server is running.");

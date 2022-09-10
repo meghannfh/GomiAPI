@@ -44,7 +44,7 @@ $(document).ready(function () {
           $("#name").val('')//empty the input again
 
           
-          itemName = result.name//set item name and to lowercase
+          itemName = result.name//set item name
           classification = result.classification//set classification
           material = result.material//set material
           instructions = result.instructions//set instructions
@@ -58,6 +58,7 @@ $(document).ready(function () {
           checkClassification()
           checkForContact()
           addBagImg()
+          addMark()
 
         });
     },
@@ -93,16 +94,18 @@ function reAddClassHidden(){
   })
 }
 
+//check for classification as burnable or non-burnable or for 
+//material set to plastic and show appropriate plastic bag
 function addBagImg(){
   if(classification === 'Burnable'){
     $('#bagContainer').toggleClass('hidden')
-    bagImage.src = 'burnablebag.jpg'
+    bagImage.src = 'assets/burnablebag.jpg'
   }else if(classification === 'Non-burnable'){
     $('#bagContainer').toggleClass('hidden')
-    bagImage.src = 'nonburnablebag.jpg'
+    bagImage.src = 'assets/nonburnablebag.jpg'
   }else if(material.includes('Plastic')){
     $('#bagContainer').toggleClass('hidden')
-    bagImage.src = 'plasticsbag.jpg'
+    bagImage.src = 'assets/plasticsbag.jpg'
   }
 }
 
@@ -122,5 +125,32 @@ function checkClassification(){
   } else if(classification === 'Oversized'){
     $('#overSize').toggleClass('hidden')
   
+  }
+}
+
+//'Plastic'
+//'Paper'
+//'Metal'
+//'Aluminium'
+
+//add recyclable mark
+function addMark(){
+  if(classification === 'Recyclable'){
+    if(material === 'Plastic'){
+      $('#markContainer').toggleClass('hidden')
+      markImage.src = 'assets/plastic.svg.png'
+    }else if(material === 'Paper'){
+      $('#markContainer').toggleClass('hidden')
+      markImage.src = 'assets/kami.svg.png'
+    }else if(material === 'Aluminum'){
+      $('#markContainer').toggleCLass('hidden')
+      markImage.src = 'assets/alumi.svg.png'
+    }else if(material === 'Metal'){
+      $('#markContainer').toggleClass('hidden')
+      markImage.src = 'assets/steel.svg.png'
+    }
+  }else if(classification === !'Recyclable'){
+    $('#markContainer').toggleClass('hidden')
+    // markImage.src = image to show item is not recyclable
   }
 }
