@@ -27,9 +27,10 @@ body{
     margin: 4rem auto;
     width: 60vw;
     padding: calc(.5rem * 1.5) .5rem;
-    border-radius: 20px;
-    border: 1.5px solid rgb(83, 83, 83);
+    border-radius: 10px;
+    border: .5px solid rgb(133, 133, 133);
     background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .searchContainer{
@@ -83,9 +84,8 @@ body{
     align-items: center;
     max-width: 25%;
     border-radius: 10px;
-    border: 1.5px solid rgb(83, 83, 83);
     overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
 }
 
 .markImg{
@@ -199,27 +199,35 @@ body{
     bottom: -100%;
     left:0;
     right:0;
-    width: 50vw;
+    width: 500px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     /* border: 1px solid rgb(51, 51, 51); */
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    border-radius: 10px;
-    padding: calc(.5rem * 1.5) .5rem;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    border-radius: 3px;
+    padding: calc(.7rem * 1.5) .5rem;
     transition: all .2s;
 }
 
-.fa-circle-xmark{
+.xmarkContact{
     position:absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     top: .5rem;
     right: .5rem;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    font-size: 11px;
 }
 
-.fa-circle-xmark:hover{
+.xmarkContact:hover{
     cursor: pointer;
-    text-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    background-color: #bdbdbd83;
+    color: white;
 }
 
 /*show contact info*/
@@ -229,15 +237,22 @@ body{
 
 .specialOrOversize{
     font-size: 1.2rem;
+    padding-top: .5rem;
 }
 
 .contactExplanation{
     font-weight: 200;
     font-size: .8rem;
     text-align: center;
+    padding-top: .5rem;
+}
+
+.phoneNumber{
+    padding-top: .5rem;
 }
 
 .phoneIcon{
+    padding-top: .5rem;
     font-size: 2rem;
     transform: rotate(-40deg);
 }
@@ -295,13 +310,13 @@ footer{
 /*Contributors STYLES AND ANIMATION*/
 .parent {
     position: relative;
-    height: 55px;
-    width: 55px;
+    height: 60px;
+    width: 60px;
     transition: width 1s;
     overflow: hidden;
 }
 
-.textcover{
+/* .textcover{
     visibility: hidden;
     position: absolute;
     left: 0;
@@ -311,14 +326,14 @@ footer{
     background-color: white;
     z-index: 2;
     transition: width 1s ease-out;
-}
+} */
 
 .text{
     position: absolute;
     text-align: right;
     top: 0;
     right: 0;
-    padding-top: .3rem;
+    padding-top: .7rem;
     width: 100%;
     height: auto;
 }
@@ -329,18 +344,18 @@ footer{
 }
 
 .text h6{
-    font-size: .8rem;
+    font-size: .7rem;
 }
 .text p{
-    font-size: .7rem;
+    font-size: .6rem;
 }
 
 .child{
     position: absolute;
     right: 0;
     top: 0;
-    height: 55px;
-    width: 55px;
+    height: 60px;
+    width: 60px;
     border-radius: 50%;
     transition: transform 1s;
     z-index: 3;
@@ -353,11 +368,19 @@ footer{
 }
 
 .parent:hover{
-    width: 115px;
+    width: 120px;
 }
 
 .parent:hover .child{
     transform: translateX(-100%);
+}
+
+.parent:hover .hide{
+    visibility: visible;
+}
+
+.parent:hover .text p{
+    font-size: .8rem;
 }
 
 .parent:hover .textcover{

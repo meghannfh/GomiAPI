@@ -3,7 +3,7 @@ const headers = document.querySelectorAll('.headers')
 const images = document.querySelectorAll('.images')
 let markImage = document.getElementById('markImg');
 let bagImage = document.getElementById('bagImg');
-const textParent = document.querySelectorAll('.parent')
+
 
 let itemName;
 let classification;
@@ -163,3 +163,4 @@ function addMark(){
     // markImage.src = image to show item is not recyclable
   }
 }
+
