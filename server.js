@@ -7,8 +7,6 @@ const { response } = require("express");
 // const ejs = require('ejs')
 require('dotenv').config({ path: './config/.env' })
 
-const PORT = 3001;
-
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(cors());
