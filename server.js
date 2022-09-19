@@ -40,11 +40,20 @@ app.get("/search", async (request, response) => {
               "query": `${request.query.query}`,
               "path": "name",
               "fuzzy": {
-                "maxEdits": 2,
-                "prefixLength": 2
+                "maxEdits": 1,
+                "prefixLength": 2,
+                "maxExpansions": 5
+              },
+              "score": {
+                "boost": {
+                  "value": 3
+                }
               }
             }
           }
+        },
+        {
+          "$limit": 7
         }
       ]).toArray();
     response.send(result);

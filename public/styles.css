@@ -22,15 +22,17 @@
 
 .container{
     display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    margin: 4rem auto;
-    width: 95vw;
-    /* padding: calc(.5rem * 1.5) .5rem; */
+    flex-direction: column;
+    gap: .3em;
+    width: 100vw;
+    padding: 0 .3em 0 .3em;
+    justify-content: center;
+    margin: 4em auto;
 }
 
 .searchContainer{
-    width: 45%;
+    align-self: center;
+    border: 1px solid red;
     display: flex;
     flex-direction: column;
     padding: calc(.5rem * 1.5) .5rem;
@@ -44,45 +46,41 @@
 }
 
 .middleSectionContainer{
+    justify-self: center;
+    align-self: center;
+    border: 1px solid red;
     display: flex;
     flex-direction: row;
-    width: 55%;
-    gap: .3rem;
-    /* margin-top: calc(.5rem * 1.5); */
-    /* padding: calc(.5rem * 1.5) .5rem; */
+    width: fit-content;
 }
 
 .info {
-    width: 70%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     border-radius: 10px 0 0 10px;
     overflow: hidden;
-    background-color: rgba(106, 197, 243, 0.483);
+    background-color: rgba(121, 255, 210, 0.28);
     /* margin-top: calc(.5rem * 1.5);*/
     padding: calc(.5rem * 1.5) 1rem;
 }
 
 .bagAndMarkContainer{
-    width: 30%;
     display: flex;
     flex-direction: column;
     gap: .3rem;
-    /* justify-content: center; */
     align-content: center;
     overflow: hidden;
 }
 
 .markContainer,
 .bagContainer{
+    height: 10em;
+    width: 10em;
     display: flex;
-    width: 100%;
-    height: 50%;
-    /* justify-content: center; */
     align-items: center;
     overflow: hidden;
-    /* padding: calc(.5rem * 1.5) 0 calc(.5rem * 1.5) 0; */
+    padding: calc(.5rem * 1.5) calc(.5rem * 1.5);
 }
 
 .searchContainerBtns{
@@ -118,6 +116,7 @@
     font-size: 1.7rem;
     font-weight: 200;
     line-height: 1.5;
+    margin: .2em 0 .2em 0;
 }
 
 .explanation{
@@ -137,18 +136,9 @@
 
 .markImg,
 .bagImg{
-    width: 150px;
-    height: 150px;
-}
-
-/* .markImg{
-    max-width: 100%;
-}
-
-.bagImg {
     width: 100%;
     height: 100%;
-} */
+}
 
 
 /*INPUT STYLES*/
@@ -158,7 +148,6 @@
 
 .input__field{
     outline: .5px solid rgb(112, 112, 112);
-    margin-top: .5rem;
     box-sizing: border-box;
     width: 100%;
     border: none;
@@ -189,16 +178,9 @@
     background-color: white;
 }
 
-/*END UP INPUT STYLES*/
+/*END OP INPUT STYLES*/
 
-/* ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-} */
+
 /*ITEM NAME STYLES*/
 .itemName{
     font-size: 1.5rem;
@@ -294,7 +276,7 @@
 
 /*show contact info*/
 .show-contact {
-    bottom: 10%;
+    bottom: 50%;
   }
 
 .specialOrOversize{
@@ -363,10 +345,6 @@ footer{
     gap: .3rem;
     flex-direction: row;
     align-items: center;
-}
-
-.addbg{
-    background-color: #008c8a;
 }
 
 /*Contributors STYLES AND ANIMATION*/
@@ -447,8 +425,6 @@ footer{
 
 }
 
-
-/*BEGIN MEDIA QUERIES*/
 @media screen and (max-width: 786px) {
     .container{
         border: 1px solid red;
@@ -456,44 +432,42 @@ footer{
     }
 
     .searchContainer{
-        width: 70%;
         align-self: center;
     }
 
     .middleSectionContainer{
         flex-direction: column;
         align-self: center;
-        width: 70%;
-        height: 100%;
     }
 
     .info{
         width: 100%;
-        height: 60%;
         border-radius: 10px 10px 0 0;
     }
 
     .bagAndMarkContainer{
-        height: 40%;
-        width: 100%;
         flex-direction: row;
     }
 
     .subtitle{
-        font-weight: 200;
+        display:none;
     }
 
     .bagContainer,
     .markContainer{
-        width: 15em;
-        height: 15em;
-    }
-
-    .markImg,
-    .bagImg{
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
+        width: 50%;
+        overflow: hidden;
     }
 }
 
+@media screen and (max-width: 350px){
+    .bagAndMarkContainer{
+        flex-direction: column;
+    }
+    
+    .bagContainer,
+    .markContainer{
+        /* width: 100%; */
+        height: 10em;
+    }
+}
