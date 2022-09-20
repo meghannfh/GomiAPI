@@ -34,6 +34,7 @@ $(document).ready(function () {
       $("#itemName").text('')//empty item name text for each new search
       $("#instructions").text('')//empty instructions text 
       $("#material").text('')//empty material text
+      $(".subtitle").addClass('hidden')
 
       console.log(ui.item.id);
       fetch(`http://localhost:3001/get/${ui.item.id}`)
@@ -71,12 +72,12 @@ $(document).ready(function () {
 //If !contact then hide contact info box when each new item is selected
 function checkForContact(){
   if(contact){
-    document.getElementById('contactInfo').classList.add('show-contact')
-    document.getElementById('xmark').addEventListener('click', ()=>{
-      document.getElementById('contactInfo').classList.remove('show-contact')
-    })
-  }else{
-    document.getElementById('contactInfo').classList.remove('show-contact')
+    $('#contactInfo').removeClass('hidden')
+  //   document.getElementById('xmark').addEventListener('click', ()=>{
+  //     document.getElementById('contactInfo').classList.remove('show-contact')
+  //   })
+  // }else{
+  //   document.getElementById('contactInfo').classList.remove('show-contact')
   }
 }
 
@@ -93,6 +94,8 @@ function reAddClassHidden(){
   images.forEach(image => {
     image.classList.add('hidden')
   })
+
+  $('#contactInfo').addClass('hidden')
 }
 
 //check for classification as burnable or non-burnable or for 
