@@ -170,10 +170,12 @@
 .input__field{
     outline: .5px solid rgb(112, 112, 112);
     width: 100%;
-    border: none;
+    border: solid #7BD751 3px;
     padding: calc(.5rem * 1.5) .7rem;
     /* color: rgb(50, 48, 48); rgb(69, 72, 75) */
-    background: transparent; /*transparent*/
+    /*background: transparent; /*transparent*/
+    background: transparent url("assets/searchicon.png") no-repeat 9px center;
+    background-size: contain;
     border-radius: 37px;
 }
 
@@ -408,6 +410,14 @@ footer{
 }
 
 @media screen and (max-width: 786px) {
+    .titleContainer{
+        align-self: center;
+    }
+
+    .title1, .title2{
+        font-size: 6rem;
+    }
+
     .container{
         border: 1px solid red;
         flex-direction: column;
@@ -415,6 +425,7 @@ footer{
 
     .searchContainer{
         align-self: center;
+        width: 353px;
     }
 
     .middleSectionContainer{
@@ -443,6 +454,14 @@ footer{
 }
 
 @media screen and (max-width: 350px){
+    .title1, .title2{
+        font-size: 3rem;
+    }
+
+    .searchContainer{
+        width: auto;
+    }
+
     .bagAndMarkContainer{
         flex-direction: column;
     }
