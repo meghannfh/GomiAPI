@@ -37,8 +37,8 @@
 
 .searchContainer{
     /* align-self: center; */
-    border: 1px solid red;
-    width: 533px;
+    width:50%;
+    /* width: 533px; */
     display: flex;
     flex-direction: column;
     padding: calc(.5rem * 1.5) .5rem;
@@ -53,12 +53,15 @@
 }
 
 .middleSectionContainer{
-    padding-top: 1.5em;
+    gap: 1rem;
+    margin-top: 1.5em;
     width: 100%;
     justify-self: center;
     align-self: center;
     display: flex;
     flex-direction: row;
+    /* border-radius: 3px 3px;
+    border: 1px solid rgb(60, 59, 59); */
 }
 
 .info {
@@ -84,9 +87,23 @@
 .markContainer,
 .bagContainer{
     display: flex;
+    flex-direction: column;
     align-items: center;
     overflow: hidden;
-    padding: calc(.5rem * 1.5) calc(.5rem * 1.5);
+    /* padding: calc(.5rem * 1.5) calc(.5rem * 1.5); */
+}
+
+.recycleLabel,
+.bagLabel{
+    text-transform: uppercase;
+    padding: .5rem .5rem;
+    line-height: 1rem;
+    text-align: center;
+    width: 100%;
+    background-color: rgba(171, 171, 171, 0.598);
+    border-radius: 3px 3px 0px 0px;
+    font-size: 1rem;
+    
 }
 
 .searchContainerBtns{
@@ -113,7 +130,8 @@
 
 .title1{
     font-family: 'Days One', sans-serif;
-    font-size: 9rem;
+    /* font-size: 9rem; */
+    font-size: 700%;
     line-height: 72%;
     font-weight: 400;
     color: #7BD751;
@@ -124,7 +142,8 @@
 
 .title2{
     font-family: 'Days One', sans-serif;
-    font-size: 9rem;
+    /* font-size: 9rem; */
+    font-size: 700%;
     line-height: 72%;
     font-weight: 400;
     color: #FFB039;
@@ -171,12 +190,17 @@
     outline: .5px solid rgb(112, 112, 112);
     width: 100%;
     border: solid #7BD751 3px;
-    padding: calc(.5rem * 1.5) .7rem;
+    padding: calc(.5rem * 1.5) 4rem;
     /* color: rgb(50, 48, 48); rgb(69, 72, 75) */
     /*background: transparent; /*transparent*/
     background: transparent url("assets/searchicon.png") no-repeat 9px center;
     background-size: contain;
     border-radius: 37px;
+    font-size: 1.1rem;
+}
+
+.input__field::placeholder{
+    color: rgba(112, 112, 112, 0.607);
 }
 
 .input__label{
@@ -205,13 +229,15 @@
 
 /*ITEM NAME STYLES*/
 .itemName{
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 
 /*BURNABLE OR NOT BURNABLE DESIGANTIONS*/
 .burnableDistinction > div > h4{
+    font-size: 1.5rem;
     display: inline-block;
     text-transform: uppercase;
     text-shadow: 0 0 1px rgb(51, 51, 51), 0 0 1px rgb(51, 51, 51), 0 0 1px rgb(51, 51, 51), 0 0 1px rgb(51, 51, 51);
@@ -238,14 +264,21 @@
     color: rgb(161, 113, 255);
 }
 
+/*DISTINCTION MARKS*/
+.classTypes .distinctionMark{
+    font-size: 1.5rem;
+}
+
 /*MATERIALS & INSTRUCTIONS SECTION*/
 .materialHeader{
-    display: inline-block;
+    display: block;
 }
 
 .instructionsHeader,
 .materialHeader{
     font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1rem;
 }
 
 .hidden{
@@ -259,6 +292,7 @@
 .instructions,
 .material{
     font-weight: 200;
+    font-size: 1.3rem;
 }
 
 /*CONTACT INFO*/
@@ -419,13 +453,12 @@ footer{
     }
 
     .container{
-        border: 1px solid red;
         flex-direction: column;
     }
 
     .searchContainer{
         align-self: center;
-        width: 353px;
+        width: 90%;
     }
 
     .middleSectionContainer{
@@ -440,6 +473,7 @@ footer{
 
     .bagAndMarkContainer{
         flex-direction: row;
+        width: 100%;
     }
 
     .subtitle{
@@ -450,6 +484,12 @@ footer{
     .markContainer{
         width: 50%;
         overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .searchContainer{
+        width: 100%;
     }
 }
 
@@ -470,5 +510,9 @@ footer{
     .markContainer{
         /* width: 100%; */
         height: 10em;
+    }
+
+    .input__field{
+        font-size: 1rem;
     }
 }

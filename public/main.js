@@ -104,15 +104,18 @@ function addBagImg(){
   if(classification === 'Burnable'){
     $('#bagContainer').toggleClass('hidden')
     bagImage.src = 'assets/burnablebag.jpg'
+    bagImage.setAttribute("alt","burnable bag")//this syntax
   }else if(classification === 'Non-burnable'){
     $('#bagContainer').toggleClass('hidden')
     bagImage.src = 'assets/nonburnablebag.jpg'
+    bagImage.alt = 'nonburnable bag'
   }else if(material.includes('Plastic')){
     $('#bagContainer').toggleClass('hidden')
     bagImage.src = 'assets/plasticsbag.jpg'
   }else if(material.includes('Paper')){
     $('#bagContainer').toggleClass('hidden')
     bagImage.src = 'assets/paperRope.png'
+    bagImage.alt = 'paper rope'
   }
 }
 
@@ -146,12 +149,15 @@ function addMark(){
     if(material === 'Plastic'){
       $('#markContainer').toggleClass('hidden')
       markImage.src = 'assets/plastic.svg.png'
+      markImage.alt = 'plastic recycle mark'
     }else if(material === 'Paper'){
       $('#markContainer').toggleClass('hidden')
       markImage.src = 'assets/kami.svg.png'
+      markImage.alt = 'paper recycle mark'
     }else if(material === 'Aluminum'){
       $('#markContainer').toggleCLass('hidden')
       markImage.src = 'assets/alumi.svg.png'
+      markImage.alt = 'can or aluminum recycle mark'
     }else if(material === 'Metal'){
       $('#markContainer').toggleClass('hidden')
       markImage.src = 'assets/steel.svg.png'
