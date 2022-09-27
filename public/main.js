@@ -11,6 +11,16 @@ let instructions;
 let material;
 let contact;
 
+/*ACCORDIAN INFO CONTENT Toggle*/
+const accordian = document.querySelectorAll('.card')
+
+accordian.forEach((el) => {
+  el.addEventListener('click', () => {
+    el.classList.toggle('active')
+  })
+})
+
+
 $(document).ready(function () {
   $("#name").autocomplete({
     source: async function (req, res) {
@@ -35,6 +45,7 @@ $(document).ready(function () {
       $("#instructions").text('')//empty instructions text 
       $("#material").text('')//empty material text
       $(".subtitle").addClass('hidden')
+      $(".accordian-wrapper").addClass('hidden')
 
       console.log(ui.item.id);
       fetch(`http://localhost:3001/get/${ui.item.id}`)

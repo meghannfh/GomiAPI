@@ -7,20 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    /* border: 1px solid red; */
 }
-
-/* #banner{
-    max-width: 56vh;
-    max-height: 60vh;
-    margin-top: 5vh;
-} */
-
-/* .hero{
-    display: flex;
-    justify-content: center;
-}*/
-
 
 .container{
     display: flex;
@@ -36,9 +23,7 @@
 }
 
 .searchContainer{
-    /* align-self: center; */
     width:50%;
-    /* width: 533px; */
     display: flex;
     flex-direction: column;
     padding: calc(.5rem * 1.5) .5rem;
@@ -60,8 +45,6 @@
     align-self: center;
     display: flex;
     flex-direction: row;
-    /* border-radius: 3px 3px;
-    border: 1px solid rgb(60, 59, 59); */
 }
 
 .info {
@@ -103,7 +86,7 @@
     background-color: rgba(171, 171, 171, 0.598);
     border-radius: 3px 3px 0px 0px;
     font-size: 1rem;
-    
+
 }
 
 .searchContainerBtns{
@@ -128,6 +111,7 @@
     cursor: pointer;
 }
 
+/*************GOMIGATA TITLE**********/
 .title1{
     font-family: 'Days One', sans-serif;
     /* font-size: 9rem; */
@@ -151,19 +135,98 @@
     overflow-wrap: break-word;
     letter-spacing: -0.025em;
 }
-
+/*********HOME EXPLANATION AND DISCLAIMER*********/
 .subtitle{
     font-size: 1rem;
     font-weight: 200;
     line-height: 1.5;
-    margin: .2em 0 .2em 0;
+    margin-bottom: 1rem;
 }
 
-.explanation{
-    font-weight: 300;
-    font-size: .7rem;
-    margin: 0 0 0 calc(.5rem * 1.5);
+.subtitle.disclaimer{
+    font-size: 0.6rem;
+    font-style: italic;
 }
+
+/*********MAIN ACCORDIAN CONTENT************/
+.card {
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.card-title{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card .card-body{
+    border: 1px solid #7BD751;
+    padding-left: 2rem;
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    transition: .5s;
+}
+
+.card.active .card-body {
+    height: 100px;
+}
+
+.card-body ol li {
+    display: list-item;
+    font-size: .9rem;
+    font-weight: 200;
+    padding: .2rem 0;
+}
+
+.card-body .recycleTitle {
+    display: inline;
+}
+
+/*********PLUS BUTTON************/
+
+.card .menu-btns {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    display: block;
+    border: none;
+    background-color: transparent;
+}
+
+.card .menu-btns:focus{
+    outline: none;
+}
+
+.card .menu-btns .menu-btn-top,
+.card .menu-btns .menu-btn-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 2px;
+    background-color:  #7BD751;
+    transition: all 0.5s;
+}
+
+.card .menu-btns .menu-btn-top {
+    translate: 0px 6.6px 2rem;
+}
+
+.card .menu-btns .menu-btn-bottom{
+    translate: 0px 6.6px 1rem;
+    transform: rotate(90deg);
+}
+
+.card.active .menu-btns .menu-btn-bottom{
+    transform: rotate(0deg);
+}
+/*********PLUS BTN END************/
+/*********ACCORDIAN INFO END************/
 
 .bottleSpec{
     font-weight: 600;
@@ -505,7 +568,7 @@ footer{
     .bagAndMarkContainer{
         flex-direction: column;
     }
-    
+
     .bagContainer,
     .markContainer{
         /* width: 100%; */
