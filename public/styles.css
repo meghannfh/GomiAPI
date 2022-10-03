@@ -164,7 +164,7 @@
 
 .card .card-body{
     border: 1px solid #7BD751;
-    padding-left: 2rem;
+    padding: 0 2rem;
     position: relative;
     overflow: hidden;
     height: 0;
@@ -172,7 +172,8 @@
 }
 
 .card.active .card-body {
-    height: 100px;
+    height: auto;
+    padding: .7rem 2rem;
 }
 
 .card-body ol li {
@@ -182,7 +183,11 @@
     padding: .2rem 0;
 }
 
-.card-body .recycleTitle {
+.card-body .recycleTitle,
+.card-body .yes,
+.card-body .no,
+.card-body .nonCollectableTitle,
+.card-body .overSizeTitle{
     display: inline;
 }
 
@@ -260,6 +265,7 @@
     background-size: contain;
     border-radius: 37px;
     font-size: 1.1rem;
+    margin-bottom: 1rem;
 }
 
 .input__field::placeholder{
@@ -422,22 +428,20 @@ footer{
 .contributorsContainer{
     width: 100%;
     display: flex;
-    justify-content: center;
-    gap: .3rem;
+    justify-content: space-between;
     flex-direction: row;
     align-items: center;
 }
 
 /*Contributors STYLES AND ANIMATION*/
 .parent {
-    position: relative;
     height: 60px;
-    width: 60px;
+    width: fit-content;
     transition: width 1s;
-    overflow: hidden;
+    border: 1px solid greenyellow;
 }
 
-.text{
+/* .text{
     position: absolute;
     text-align: right;
     top: 0;
@@ -445,7 +449,8 @@ footer{
     padding-top: .3rem;
     width: 100%;
     height: auto;
-}
+    border: 1px solid red;
+} */
 
 .text h6{
     font-size: .7rem;
@@ -455,15 +460,12 @@ footer{
 }
 
 /*HIDE TEXT*/
-.hide{
+/* .hide{
     visibility: hidden;
-}
+} */
 
 .child{
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 60px;
+    height:60px;
     width: 60px;
     border-radius: 50%;
     transition: transform 1s;
@@ -472,11 +474,12 @@ footer{
 
 .child img {
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 50%;
+    border: 1px solid blue;
 }
 
-.parent:hover{
+/* .parent:hover{
     width: 120px;
 }
 
@@ -494,7 +497,7 @@ footer{
 
 .parent:hover .textcover{
     animation: width 1s ease-out forwards;
-}
+} */
 
 @keyframes width{
     0% {
