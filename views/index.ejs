@@ -55,19 +55,27 @@
               <ol>
                 <li>Type at least three letters to begin searching.</li>
                 <li>Click the item name or press ENTER</li>
-                <li>Items will be labels as either 
-                  <h4 class="recycleTitle" id="recycleTitle">Recyclable</h4><i class="fa-solid fa-recycle distinctionMark" alt="recyclable icon"></i> <h4 class="yes" id="yes">Burnable</h4>
-                  <i class="fa-solid fa-fire distinctionMark" alt="burnable icon"></i>
+                <li>Items will be labeled as either 
+                  <h4 class="recycleTitle" id="recycleTitle">Recyclable</h4><i class="fa-solid fa-recycle distinctionMark" alt="recyclable icon"></i>, <h4 class="yes" id="yes">Burnable</h4>
+                  <i class="fa-solid fa-fire distinctionMark" alt="burnable icon"></i>,
                   <h4 class="no" id="no" alt="non-burnable icon">Non-burnable</h4>
-                  <i class="fa-solid fa-xmark distinctionMark"></i>
+                  <i class="fa-solid fa-xmark distinctionMark"></i>,
                   <h4 class="nonCollectableTitle" id="nonCollectableTitle">Not collectable</h4>
-                  <i class="fa-solid fa-ban distinctionMark" alt="non-collectable icon"></i>
+                  <i class="fa-solid fa-ban distinctionMark" alt="non-collectable icon"></i>, or
                   <h4 class="overSizeTitle" id="overSizeTitle">Oversized</h4>
                   <i class="fa-solid fa-weight-scale distinctionMark" alt="oversized icon"></i>
                 </li>
 
                 <li><h4 class="recycleTitle" id="recycleTitle">Recyclable</h4>
-                  <i class="fa-solid fa-recycle distinctionMark" alt="recyclable icon"></i> items will be listed with their recyclable marking and instructions on how to properly dispose of the item.
+                  <i class="fa-solid fa-recycle distinctionMark" alt="recyclable icon"></i> items will be listed with their recyclable marking and/or along with the designated bag in which to use to dispose of your item.
+                </li>
+
+                <li><h4 class="no" id="no" alt="non-burnable icon">Non-burnable</h4>
+                  <i class="fa-solid fa-xmark distinctionMark"></i> items will either be disposed of using the green, non-burnable garbage bag, 「不燃るごみ袋」or have special disposal instructions.
+                </li>
+
+                <li><h4 class="yes" id="yes">Burnable</h4>
+                  <i class="fa-solid fa-fire distinctionMark" alt="burnable icon"></i> items will be disposed of using the burnable, white bag with red text, 「燃るごみ袋」.
                 </li>
               </ol>
             </div>
@@ -85,28 +93,52 @@
             <div class="card-body">
               <div class="contributorsContainer">
                 <div class="parent">
-                  <div class="child addbg">
-                      <a href="https://github.com/meghannfh"><img src="assets/contributors/meghann.png" alt=""></a>
+                  <div class="child">
+                      <a href="https://github.com/meghannfh"> <img src="assets/contributors/meghann.png" alt="" class="contributorImg"></a>
+                      <div class="text">
+                        <h4>Meghann</h4>
+                        <p>Frontend</p>
+                        <p>Backend</p>
+                      </div>
                   </div>
                 </div>
                 <div class="parent">
                   <div class="child">
-                      <a href="https://github.com/sylfort"><img src="assets/contributors/sylvio.png" alt=""></a>
+                      <a href="https://github.com/sylfort"><img src="assets/contributors/sylvio.png" alt="" class="contributorImg"></a>
+                      <div class="text">
+                        <h4>Sylvio</h4>
+                        <p>Frontend</p>
+                        <p>Backend</p>
+                      </div>
                   </div>
                 </div>
                 <div class="parent">
                   <div class="child">
-                      <a href="https://github.com/Suheily"><img src="assets/contributors/suheily.jpeg" alt=""></a>
+                      <a href="https://github.com/Suheily"><img src="assets/contributors/suheily.jpeg" alt="" class="contributorImg"></a>
+                      <div class="text">
+                        <h4>Suheily</h4>
+                        <p>Frontend</p>
+                        <p>Backend</p>
+                      </div>
                   </div>
                 </div>
                 <div class="parent">
                   <div class="child">
-                      <a href="https://github.com/Tch4lla"><img src="assets/contributors/sulamayne.jpeg" alt=""></a>
+                      <a href="https://github.com/Tch4lla"><img src="assets/contributors/sulamayne.jpeg" alt="" class="contributorImg"></a>
+                      <div class="text">
+                        <h4>Sulamayne</h4>
+                        <p>Frontend</p>
+                        <p>Backend</p>
+                      </div>
                   </div>
                 </div>
                 <div class="parent">
                   <div class="child">
-                      <a href="https://github.com/NewHorizons1"><img src="assets/contributors/louis.png" alt=""></a>
+                      <a href="https://github.com/NewHorizons1"><img src="assets/contributors/louis.png" alt="" class="contributorImg"></a>
+                      <div class="text">
+                        <h4>Louis</h4>
+                        <p>Backend</p>
+                      </div>
                   </div>
                 </div>
               </div>
@@ -155,6 +187,12 @@
               <h4 class="instructionsHeader">Instructions:</h5>
               <p class="instructions" id="instructions"></p>
             </div>
+
+            <div class="hidden" id="contactInfo">
+              <h4 class="specialOrOversize">This is a special or oversize item.</h4>
+              <p class="contactExplanation">Please call Nagai City Hall for more information.</p>
+              <a href="tel:+81-0238-82-8007" class="callContact"><h3 class="phoneNumber" id="contactNumber"></h3></a>
+            </div>
   
           </section>
   
@@ -172,12 +210,6 @@
   
         </section>
 
-        <div class="hidden" id="contactInfo">
-          <h4 class="specialOrOversize">This is a special or oversize item.</h4>
-          <p class="contactExplanation">Please call Nagai City Hall for more information.</p>
-          <a href="tel:+81-0238-82-8007" class="callContact"><h3 class="phoneNumber" id="contactNumber"></h3></a>
-        </div>
-
         <div class="buttonsContainer">
           <p class="searchContainerBtns">Guide</p>
           <p class="searchContainerBtns">Github Code</p>
@@ -186,57 +218,6 @@
       </section>
     
     </section>
-
-<!-- 
-    <footer class="contributors" id="contributors">
-      <div class="contributorsContainer hide">
-        <div class="parent">
-          <div class="text hide">
-              <h6>Meghann</h6>
-              <p>frontend <br> backend</p>
-          </div>
-          <div class="child addbg">
-              <a href="https://github.com/meghannfh"><img src="assets/contributors/meghann.png" alt=""></a>
-          </div>
-        </div>
-        <div class="parent">
-          <div class="text hide">
-              <h6>Sylvio</h6>
-              <p>frontend <br> backend</p>
-          </div>
-          <div class="child">
-              <a href="https://github.com/sylfort"><img src="assets/contributors/sylvio.png" alt=""></a>
-          </div>
-        </div>
-        <div class="parent">
-          <div class="text hide">
-              <h6>Suheily</h6>
-              <p>frontend <br> backend</p>
-          </div>
-          <div class="child">
-              <a href="https://github.com/Suheily"><img src="assets/contributors/suheily.jpeg" alt=""></a>
-          </div>
-        </div>
-        <div class="parent">
-          <div class="text hide">
-              <h6>Sulaymane</h6>
-              <p>frontend <br> backend</p>
-          </div>
-          <div class="child">
-              <a href="https://github.com/Tch4lla"><img src="assets/contributors/sulamayne.jpeg" alt=""></a>
-          </div>
-        </div>
-        <div class="parent">
-          <div class="text hide">
-              <h6>Louis</h6>
-              <p>frontend <br> backend</p>
-          </div>
-          <div class="child">
-              <a href="https://github.com/NewHorizons1"><img src="assets/contributors/louis.png" alt=""></a>
-          </div>
-        </div>
-      </div>
-    </footer> -->
     
     <script src="main.js"></script>
   </body>

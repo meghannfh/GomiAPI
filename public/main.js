@@ -21,6 +21,7 @@ accordian.forEach((el) => {
 })
 
 
+
 $(document).ready(function () {
   $("#name").autocomplete({
     source: async function (req, res) {

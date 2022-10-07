@@ -403,111 +403,39 @@ footer{
     height: auto;
 }
 
-.displayContributors{
-    position: fixed;
-    right: 1%;
-    bottom: 1%;
-    border-radius: 5px;
-    background-color: white;
-    color:black;
-    border: .5px solid rgb(83, 83, 83);
-}
-
-.displayContributors:hover{
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
-
-.displayContributors p{
-    font-weight: 400;
-    display: flex;
-    align-self: center;
-    padding: .5rem;
-}
-
 .contributorsContainer{
     width: 100%;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
+    gap: .5rem .2rem;
 }
 
-/*Contributors STYLES AND ANIMATION*/
-.parent {
-    height: 60px;
-    width: fit-content;
-    transition: width 1s;
-    border: 1px solid greenyellow;
-}
-
-/* .text{
-    position: absolute;
-    text-align: right;
-    top: 0;
-    right: 0;
-    padding-top: .3rem;
-    width: 100%;
-    height: auto;
-    border: 1px solid red;
-} */
-
-.text h6{
-    font-size: .7rem;
-}
-.text p{
-    font-size: .5rem;
-}
-
-/*HIDE TEXT*/
-/* .hide{
-    visibility: hidden;
-} */
+/*Contributors STYLES*/
 
 .child{
-    height:60px;
-    width: 60px;
-    border-radius: 50%;
-    transition: transform 1s;
-    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .3rem;
+    height: 62px;
+    width:fit-content;
 }
 
 .child img {
-    width: 100%;
-    height: 100%;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    border: 1px solid blue;
+    background-color: rgb(134, 181, 214);
 }
 
-/* .parent:hover{
-    width: 120px;
+.child > .text {
+    font-size: .7rem;
+    line-height: .7rem;
 }
 
-.parent:hover .child{
-    transform: translateX(-100%);
-}
-
-.parent:hover .hide{
-    visibility: visible;
-}
-
-.parent:hover .text p{
-    font-size: .6rem;
-}
-
-.parent:hover .textcover{
-    animation: width 1s ease-out forwards;
-} */
-
-@keyframes width{
-    0% {
-        width: 100%;
-    }
-    100% {
-        width: 0%;
-    }
-
-}
 
 @media screen and (max-width: 786px) {
     .titleContainer{
