@@ -180,6 +180,3 @@ function addMark(){
   }
 }
 
-function backToHome(){
-  
-}
