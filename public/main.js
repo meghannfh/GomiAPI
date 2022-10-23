@@ -3,7 +3,7 @@ const headers = document.querySelectorAll('.headers')
 const images = document.querySelectorAll('.images')
 let markImage = document.getElementById('markImg');
 let bagImage = document.getElementById('bagImg');
-
+const backToHome = document.getElementById('home')
 
 let itemName;
 let classification;
@@ -85,11 +85,6 @@ $(document).ready(function () {
 function checkForContact(){
   if(contact){
     $('#contactInfo').removeClass('hidden')
-  //   document.getElementById('xmark').addEventListener('click', ()=>{
-  //     document.getElementById('contactInfo').classList.remove('show-contact')
-  //   })
-  // }else{
-  //   document.getElementById('contactInfo').classList.remove('show-contact')
   }
 }
 
@@ -185,3 +180,6 @@ function addMark(){
   }
 }
 
+function backToHome(){
+  
+}
