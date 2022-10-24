@@ -25,7 +25,8 @@ accordian.forEach((el) => {
 $(document).ready(function () {
   $("#name").autocomplete({
     source: async function (req, res) {
-      let data = await fetch(`http://localhost:3001/search/?query=${req.term}`)
+      let data = await fetch(`/search/?query=${req.term}`)
+      // let data = await fetch(`http://localhost:3001/search/?query=${req.term}`)
         .then((results) => results.json())
         .then((results) =>
           results.map((result) => {
