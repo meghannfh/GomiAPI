@@ -1,3 +1,4 @@
-# GomiAPI
-A JSON API of Disposable Items using a database of disposable items publically provided by Nagai City in Yamagata Prefecture.
-This data will be used to create a garbage disposal app that allows users to search for disposal instructions based on item name, material, or classification.
+# GomiGata
+GomiGata is user-friendly public web application supported by a MongoDB database of disposable items, their recycling specification and disposal instructions.
+
+[Try it out here!](https://gomiapi-production.up.railway.app/)
