@@ -50,7 +50,7 @@ $(document).ready(function () {
       $(".accordian-wrapper").addClass('hidden')
 
       console.log(ui.item.id);
-      fetch(`http://localhost:3001/get/${ui.item.id}`)
+      fetch(`/get/${ui.item.id}`)
         .then((response) => response.json())
         .then((result) => {
           console.log(result);
