@@ -11,6 +11,13 @@ let instructions;
 let material;
 let contact;
 
+backToHome.addEventListener('click', showHomeInfo)
+function showHomeInfo(){
+  $(".subtitle").removeClass('hidden')
+  $(".accordian-wrapper").removeClass('hidden')
+  $("#info").addClass('hidden')
+}
+
 /*ACCORDIAN INFO CONTENT Toggle*/
 const accordian = document.querySelectorAll('.card')
 
@@ -51,6 +58,7 @@ $(document).ready(function () {
 
       console.log(ui.item.id);
       fetch(`/get/${ui.item.id}`)
+      // fetch(`http://localhost:3001/get/${ui.item.id}`)
         .then((response) => response.json())
         .then((result) => {
           console.log(result);

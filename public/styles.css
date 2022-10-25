@@ -9,17 +9,33 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    display: grid;
+    min-height: 100vh;
+    place-content: center;
+    background-image: url('/assets/bg3.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
 .container{
     display: flex;
     flex-direction: row;
     gap: .3em;
-    width: 100vw;
+    /* width: fit-content; */
+    /* width: 100vw; */
     justify-content: center;
-    margin: 4em auto;
+    /* margin: 4em auto; */
 }
 
 .titleContainer{
     width: fit-content;
+}
+
+.titleContainer:hover{
+    cursor: pointer;
 }
 
 .searchContainer{
@@ -27,6 +43,9 @@
     display: flex;
     flex-direction: column;
     padding: calc(.5rem * 1.5) .5rem;
+    background-color: #ffffffca;
+    border-radius: 20px 20px;
+    backdrop-filter: blur(10px);
 }
 
 .buttonsContainer{
@@ -45,6 +64,7 @@
     align-self: center;
     display: flex;
     flex-direction: row;
+    border-radius: 10px 10px;
 }
 
 .info {
@@ -118,7 +138,7 @@
     font-size: 700%;
     line-height: 72%;
     font-weight: 400;
-    color: #7BD751;
+    color: #53daff;
     text-transform: uppercase;
     overflow-wrap: break-word;
     letter-spacing: -0.025em;
@@ -130,7 +150,7 @@
     font-size: 700%;
     line-height: 72%;
     font-weight: 400;
-    color: #FFB039;
+    color: #009dff;
     text-transform: uppercase;
     overflow-wrap: break-word;
     letter-spacing: -0.025em;
@@ -160,10 +180,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    /* border-bottom: 3px solid #009dff; */
 }
 
 .card .card-body{
-    border: 1px solid #7BD751;
     padding: 0 2rem;
     position: relative;
     overflow: hidden;
@@ -171,9 +191,15 @@
     transition: .5s;
 }
 
+.card .card-body > ol > li > h4 {
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 1px rgb(51, 51, 51), 0 0 1px rgb(51, 51, 51), 0 0 1px rgb(51, 51, 51), 0 0 1px rgb(51, 51, 51);
+}
+
 .card.active .card-body {
     height: auto;
-    padding: .7rem 2rem;
+    padding: .7rem 2rem 0 2rem;
 }
 
 .card-body ol li {
@@ -214,7 +240,7 @@
     left: 0;
     width: 15px;
     height: 2px;
-    background-color:  #7BD751;
+    background-color:  #009dff;
     transition: all 0.5s;
 }
 
@@ -257,19 +283,19 @@
 .input__field{
     outline: .5px solid rgb(112, 112, 112);
     width: 100%;
-    border: solid #7BD751 3px;
-    padding: calc(.5rem * 1.5) 4rem;
+    border: solid #009dff 3px;
+    padding: calc(.3rem * 1.5) 2.5rem;
     /* color: rgb(50, 48, 48); rgb(69, 72, 75) */
     /*background: transparent; /*transparent*/
-    background: transparent url("assets/searchicon.png") no-repeat 9px center;
-    background-size: contain;
-    border-radius: 37px;
+    background: transparent url("/assets/magnifying-glass-solid.svg") no-repeat 9px center;
+    background-size: 30px 30px;
+    border-radius: 15px;
     font-size: 1.1rem;
     margin-bottom: 1rem;
 }
 
 .input__field::placeholder{
-    color: rgba(112, 112, 112, 0.607);
+    color: rgba(8, 8, 8, 0.607);
 }
 
 .input__label{
@@ -424,9 +450,19 @@ footer{
     width:fit-content;
 }
 
-.child img {
+.child a {
     width: 60px;
     height: 60px;
+    border-radius: 50%;
+}
+
+.child a:hover{
+    outline: 3px solid rgba(54, 148, 255, 0.848);
+}
+
+.child a img {
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     background-color: rgb(134, 181, 214);
 }
