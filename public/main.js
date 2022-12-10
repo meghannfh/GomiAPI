@@ -4,6 +4,7 @@ const images = document.querySelectorAll('.images')
 let markImage = document.getElementById('markImg');
 let bagImage = document.getElementById('bagImg');
 const backToHome = document.getElementById('home')
+const formBtns = document.querySelectorAll('.form-btn')
 
 let itemName;
 let classification;
@@ -13,7 +14,7 @@ let contact;
 
 backToHome.addEventListener('click', showHomeInfo)
 function showHomeInfo(){
-  $(".subtitle").removeClass('hidden')
+  // $(".subtitle").removeClass('hidden')
   $(".accordian-wrapper").removeClass('hidden')
   $("#info").addClass('hidden')
 }
@@ -27,8 +28,23 @@ accordian.forEach((el) => {
   })
 })
 
+//show add-item form
+formBtns.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    const form = document.getElementById('add-form-container')
+    const target = e.target
+    const formBtn = target.getAttribute('id')
+    console.log(formBtn)
+    if(formBtn !== 'form-close-btn'){
+      form.classList.add('show-form')
+    } else {
+      form.classList.remove('show-form')
+    }
+  })
+})
 
 
+//Making a search query using input
 $(document).ready(function () {
   $("#name").autocomplete({
     source: async function (req, res) {
@@ -53,7 +69,7 @@ $(document).ready(function () {
       $("#itemName").text('')//empty item name text for each new search
       $("#instructions").text('')//empty instructions text 
       $("#material").text('')//empty material text
-      $(".subtitle").addClass('hidden')
+      // $(".subtitle").addClass('hidden')
       $(".accordian-wrapper").addClass('hidden')
 
       console.log(ui.item.id);
@@ -115,7 +131,7 @@ function reAddClassHidden(){
 }
 
 //check for classification as burnable or non-burnable or for 
-//material set to plastic and show appropriate plastic bag
+//material set to plastic and show appropriate bag
 function addBagImg(){
   if(classification === 'Burnable'){
     $('#bagContainer').toggleClass('hidden')
@@ -134,6 +150,7 @@ function addBagImg(){
     bagImage.alt = 'paper rope'
   }
 }
+
 
 function checkClassification(){
   if (classification === "Burnable") {

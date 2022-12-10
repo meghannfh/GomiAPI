@@ -17,204 +17,195 @@
     <title>Gomigata</title>
   </head>
   <body>
-    
-    <!-- <h1 class="text-4xl">Gomigata</h2> -->
-    <!-- <section class="hero">
-      <img id="banner" src="recycle.jpeg" alt="">
-    </section> -->
-
-    <section class="container bg">
-      <div class="titleContainer" id="home">
-        <h1 class="title1">Gomi</h1>
-        <h1 class="title2">Gata</h1>
-      </div>
-    
-      <section class="searchContainer">
-        <!-- <h1 class="title">Gomigata</h1> -->
-        <label for="name" class="input">
-        <input id="name" type="text" placeholder="Search" class="input__field" />
-        </label>
-
-        <p class="subtitle">Separating your garbage in Yamagata is no joke. It takes time and patience, and it can be a little overwhelming. GOMIGATA is here to help simplify that process.</p>
-        <p class="subtitle disclaimer">DISCLAIMER: These disposal instructions are based on regulations from Nagai City in Yamagata Prefecture. While disposal instructions are universal for some items throughout Japan, please contact your local City Hall for items you are unsure of.</p>
-        
-
-        <div class="accordian-wrapper">
-          <div class="card">
-            <div class="card-title">
-              <span>Using GOMIGATA</span>
-              <!--Hamburger Icon-->
-              <button class="menu-btns">
-                <span class="menu-btn-top"></span>
-                <span class="menu-btn-bottom"></span>
-              </button>
-            </div>
-            <div class="card-body">
-              <ol>
-                <li>Type at least three letters to begin searching.</li>
-                <li>Click the item name or press ENTER</li>
-                <li>Items will be labeled as either 
-                  <h4 class="recycleTitle" id="recycleTitle">Recyclable</h4><i class="fa-solid fa-recycle distinctionMark" alt="recyclable icon"></i>, <h4 class="yes" id="yes">Burnable</h4>
-                  <i class="fa-solid fa-fire distinctionMark" alt="burnable icon"></i>,
-                  <h4 class="no" id="no" alt="non-burnable icon">Non-burnable</h4>
-                  <i class="fa-solid fa-xmark distinctionMark"></i>,
-                  <h4 class="nonCollectableTitle" id="nonCollectableTitle">Not collectable</h4>
-                  <i class="fa-solid fa-ban distinctionMark" alt="non-collectable icon"></i>, or
-                  <h4 class="overSizeTitle" id="overSizeTitle">Oversized</h4>
-                  <i class="fa-solid fa-weight-scale distinctionMark" alt="oversized icon"></i>
-                </li>
-
-                <li><h4 class="recycleTitle" id="recycleTitle">Recyclable</h4>
-                  <i class="fa-solid fa-recycle distinctionMark" alt="recyclable icon"></i> items will be listed with their recyclable marking and/or along with the designated bag in which to use to dispose of your item.
-                </li>
-
-                <li><h4 class="no" id="no" alt="non-burnable icon">Non-burnable</h4>
-                  <i class="fa-solid fa-xmark distinctionMark"></i> items will either be disposed of using the green, non-burnable garbage bag, 「不燃るごみ袋」or have special disposal instructions.
-                </li>
-
-                <li><h4 class="yes" id="yes">Burnable</h4>
-                  <i class="fa-solid fa-fire distinctionMark" alt="burnable icon"></i> items will be disposed of using the burnable, white bag with red text, 「燃るごみ袋」.
-                </li>
-              </ol>
-            </div>
+    <nav>
+      <button type="button" class="form-btn" id="add-item-btn">add item</button>
+      <a target="_blank" href="https://github.com/meghannfh/GomiAPI"><button type="button" class="view-repo-btn"><i class="fa-brands fa-github"></i> code</button></a>
+    </nav>
+    <div class="center-content">
+      <section class="add-form-container" id="add-form-container">
+        <form action="/add" method="POST">
+          <div>
+            <input type="text" name="name" alt="item name" placeholder="enter new item name" class="form-text">
           </div>
   
-          <div class="card">
-            <div class="card-title">
-              <span>Contributors</span>
-            <!--Hamburger Icon-->
-              <button class="menu-btns">
-                <span class="menu-btn-top"></span>
-                <span class="menu-btn-bottom"></span>
-              </button>
-            </div>
-            <div class="card-body">
-              <div class="contributorsContainer">
-                <div class="parent">
-                  <div class="child">
-                      <a href="https://github.com/meghannfh"> <img src="assets/contributors/meghann.png" alt="" class="contributorImg"></a>
-                      <div class="text">
-                        <h4>Meghann</h4>
-                        <p>Frontend</p>
-                        <p>Backend</p>
-                      </div>
-                  </div>
-                </div>
-                <div class="parent">
-                  <div class="child">
-                      <a href="https://github.com/sylfort"><img src="assets/contributors/sylvio.png" alt="" class="contributorImg"></a>
-                      <div class="text">
-                        <h4>Sylvio</h4>
-                        <p>Frontend</p>
-                        <p>Backend</p>
-                      </div>
-                  </div>
-                </div>
-                <div class="parent">
-                  <div class="child">
-                      <a href="https://github.com/Suheily"><img src="assets/contributors/suheily.jpeg" alt="" class="contributorImg"></a>
-                      <div class="text">
-                        <h4>Suheily</h4>
-                        <p>Frontend</p>
-                        <p>Backend</p>
-                      </div>
-                  </div>
-                </div>
-                <div class="parent">
-                  <div class="child">
-                      <a href="https://github.com/Tch4lla"><img src="assets/contributors/sulamayne.jpeg" alt="" class="contributorImg"></a>
-                      <div class="text">
-                        <h4>Sulamayne</h4>
-                        <p>Frontend</p>
-                        <p>Backend</p>
-                      </div>
-                  </div>
-                </div>
-                <div class="parent">
-                  <div class="child">
-                      <a href="https://github.com/NewHorizons1"><img src="assets/contributors/louis.png" alt="" class="contributorImg"></a>
-                      <div class="text">
-                        <h4>Louis</h4>
-                        <p>Backend</p>
-                      </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="form-radio">
+            <p>select dominant material</p>
+            <div><input type="radio" name="material" value="Plastic">plastic</div>
+            <div><input type="radio" name="material" value="Paper">paper</div>
+            <div><input type="radio" name="material" value="Aluminum">aluminum</div>
+            <div><input type="radio" name="material" value="Metal">metal</div>
+            <div><input type="radio" name="material" value="Glass">glass</div>
           </div>
-        </div>
-    
-
-        <section class="middleSectionContainer hidden" id="info">
-
-          <section class="info">
   
+          <div class="form-radio">
+            <p>select classification</p>
             <div>
-              <h3 class="itemName" id="itemName"></h3>
+              <div><input type="radio" name="classification" value="Burnable">burnable</div>
+              <div><input type="radio" name="classification" value="Non-burnable">non-burnable</div>
+              <div><input type="radio" name="classification" value="Recyclable">recyclable</div>
+              <div><input type="radio" name="classification" value="Not collectable">not-collectable</div>
+              <div><input type="radio" name="classification" value="Oversized">oversized</div>
+            </div>
+          </div>
+  
+          <div>
+            <textarea name="instructions" rows="4" placeholder="Type special disposal instructions below" class="form-text"></textarea>
+          </div>
+  
+          <div class="form-radio">
+            <p>if oversized or not-collectable please select</p>
+            <div><input type="radio" name="contact" value="0238-82-8007">consult city hall</div>
+          </div>
+  
+          <div>
+            <input type="submit" value="submit" class="form-submit">
+            <input type="reset" value="reset" class="form-reset">
+            <button class="form-close form-btn" type="button" id="form-close-btn">close</button>
+          </div>
+        </form>
+      </section>
+  
+      <section class="container">
+        <div class="titleContainer" id="home">
+          <h1 class="title1">Gomi</h1>
+          <h1 class="title2">Gata</h1>
+        </div>
+      
+        <section class="searchContainer">
+          <!-- <h1 class="title">Gomigata</h1> -->
+          <label for="name" class="input">
+          <input id="name" type="text" placeholder="Search" class="input__field" />
+          </label>
+          <div class="accordian-wrapper">
+            <div class="card">
+              <div class="card-title">
+                <h2>About</h2>
+              <!--Hamburger Icon-->
+                <button class="menu-btns">
+                  <span class="menu-btn-top"></span>
+                  <span class="menu-btn-bottom"></span>
+                </button>
+              </div>
+              <div class="card-body">
+                <!-- https://github.com/meghannfh -->
+                <!-- https://github.com/sylfort -->
+                <!-- https://github.com/Suheily -->
+                <!-- https://github.com/Tch4lla -->
+                <!-- https://github.com/NewHorizons1 -->
+                <p>Japan's garabage sorting system is carried out at the municiple level. Each city, town, and district has a completely different system. For new expats, learning the do's and don'ts of their town's disposal rules is cause for concern, especially for those located in the countryside where instructions are not readily available in English.</p>
+                <p>GomiGata was created in hopes of remedying this issue for expats in the small country town of Nagai, Yamagata. A search query for common disposable items will return instructions for disposing of that item in English.</p>
+              </div>
             </div>
   
-            <div class="burnableDistinction">
-              <div class="burnable hidden classTypes" id="burnable">
-                <h4 class="yes" id="yes">Burnable</h4>
-                <i class="fa-solid fa-fire distinctionMark" alt="burnable icon"></i>
+            <div class="card">
+              <div class="card-title">
+                <h2>Using GOMIGATA</h2>
+                <!--Hamburger Icon-->
+                <button class="menu-btns">
+                  <span class="menu-btn-top"></span>
+                  <span class="menu-btn-bottom"></span>
+                </button>
               </div>
-              <div class="nonburnable hidden classTypes" id="nonburnable">
-                <h4 class="no" id="no" alt="non-burnable icon">Non-burnable</h4>
-                <i class="fa-solid fa-xmark distinctionMark"></i>
-              </div>
-              <div class="recyclable hidden classTypes" id="recyclable">
-                <h4 class="recycleTitle" id="recycleTitle">Recyclable</h4>
-                <i class="fa-solid fa-recycle distinctionMark" alt="recyclable icon"></i>
-              </div>
-              <div class="nonCollectable hidden classTypes" id="nonCollectable">
-                <h4 class="nonCollectableTitle" id="nonCollectableTitle">Not collectable</h4>
-                <i class="fa-solid fa-ban distinctionMark" alt="non-collectable icon"></i>
-              </div>
-              <div class="overSize hidden classTypes" id="overSize">
-                <h4 class="overSizeTitle" id="overSizeTitle">Oversized</h4>
-                <i class="fa-solid fa-weight-scale distinctionMark" alt="oversized icon"></i>
+              <div class="card-body">
+                <ol>
+                  <li>Type at least three letters to begin searching.</li>
+                  <li>Click the item name or press ENTER</li>
+                  <li>Items will be labeled as either 
+                    <h4 class="recycleTitle" id="recycleTitle">Recyclable</h4>, <h4 class="yes" id="yes">Burnable</h4>,
+                    <h4 class="no" id="no" alt="non-burnable icon">Non-burnable</h4>,
+                    <h4 class="nonCollectableTitle" id="nonCollectableTitle">Not collectable</h4>, or
+                    <h4 class="overSizeTitle" id="overSizeTitle">Oversized</h4>.
+                  </li>
+  
+                  <li><h4 class="recycleTitle" id="recycleTitle">Recyclable</h4> items will be listed with their recyclable marking and/or along with the designated bag in which to use to dispose of your item.
+                  </li>
+  
+                  <li><h4 class="no" id="no" alt="non-burnable icon">Non-burnable</h4> items will either be disposed of using the green, non-burnable garbage bag, 「不燃るごみ袋」or have special disposal instructions.
+                  </li>
+  
+                  <li><h4 class="yes" id="yes">Burnable</h4> items will be disposed of using the burnable, white bag with red text, 「燃るごみ袋」.
+                  </li>
+                </ol>
               </div>
             </div>
+          </div>
+      
   
-            <div class ="hidden headers" id="materialHeader">
-              <h4 class="materialHeader">Material:</h4>
-              <p class="material" id="material"></p>
-            </div>
+          <section class="middleSectionContainer hidden" id="info">
   
-            <div class="hidden headers" id="instructionsHeader">
-              <h4 class="instructionsHeader">Instructions:</h5>
-              <p class="instructions" id="instructions"></p>
+            <div class="display-rows">
+              <section class="info">
+    
+                <div>
+                  <h3 class="itemName" id="itemName"></h3>
+                </div>
+      
+                <div class="burnableDistinction">
+                  <div class="burnable hidden classTypes" id="burnable">
+                    <h4 class="yes" id="yes">Burnable</h4>
+                    <i class="fa-solid fa-fire distinctionMark" alt="burnable icon"></i>
+                  </div>
+                  <div class="nonburnable hidden classTypes" id="nonburnable">
+                    <h4 class="no" id="no" alt="non-burnable icon">Non-burnable</h4>
+                    <i class="fa-solid fa-xmark distinctionMark"></i>
+                  </div>
+                  <div class="recyclable hidden classTypes" id="recyclable">
+                    <h4 class="recycleTitle" id="recycleTitle">Recyclable</h4>
+                    <i class="fa-solid fa-recycle distinctionMark" alt="recyclable icon"></i>
+                  </div>
+                  <div class="nonCollectable hidden classTypes" id="nonCollectable">
+                    <h4 class="nonCollectableTitle" id="nonCollectableTitle">Not collectable</h4>
+                    <i class="fa-solid fa-ban distinctionMark" alt="non-collectable icon"></i>
+                  </div>
+                  <div class="overSize hidden classTypes" id="overSize">
+                    <h4 class="overSizeTitle" id="overSizeTitle">Oversized</h4>
+                    <i class="fa-solid fa-weight-scale distinctionMark" alt="oversized icon"></i>
+                  </div>
+                </div>
+      
+                <div class ="hidden headers" id="materialHeader">
+                  <h4 class="materialHeader">Material:</h4>
+                  <p class="material" id="material"></p>
+                </div>
+      
+                <div class="hidden headers" id="instructionsHeader">
+                  <h4 class="instructionsHeader">Instructions:</h5>
+                  <p class="instructions" id="instructions"></p>
+                </div>
+    
+                <!-- <div class="contactInfo hidden" id="contactInfo">
+                  <h4 class="specialOrOversize">This is a special or oversize item.</h4>
+                  <p class="contactExplanation">Please call Nagai City Hall for more information.</p>
+                  <a href="tel:+81-0238-82-8007" class="callContact"><h3 class="phoneNumber" id="contactNumber"></h3></a>
+                </div> -->
+      
+              </section>
+      
+              <div class="bagAndMarkContainer">
+                <section class="markContainer images hidden" id="markContainer">
+                  <p class="recycleLabel">mark</p>
+                  <img src="" alt="" class="markImg" id="markImg">
+                </section>
+      
+                <section class="bagContainer images hidden" id="bagContainer">
+                  <p class="bagLabel">bag to use</p>
+                  <img src="" alt="" class="bagImg" id="bagImg">
+                </section>
+              </div>
+
             </div>
 
-            <div class="hidden" id="contactInfo">
+            <div class="contactInfo hidden" id="contactInfo">
               <h4 class="specialOrOversize">This is a special or oversize item.</h4>
               <p class="contactExplanation">Please call Nagai City Hall for more information.</p>
               <a href="tel:+81-0238-82-8007" class="callContact"><h3 class="phoneNumber" id="contactNumber"></h3></a>
             </div>
-  
+    
           </section>
   
-          <div class="bagAndMarkContainer">
-            <section class="markContainer images hidden" id="markContainer">
-              <p class="recycleLabel">recycling mark</p>
-              <img src="" alt="" class="markImg" id="markImg">
-            </section>
-  
-            <section class="bagContainer images hidden" id="bagContainer">
-              <p class="bagLabel">bag to use</p>
-              <img src="" alt="" class="bagImg" id="bagImg">
-            </section>
-          </div>
-  
         </section>
-
-        <div class="buttonsContainer">
-          <p class="searchContainerBtns">Guide</p>
-          <p class="searchContainerBtns">Github Code</p>
-          <p class="searchContainerBtns">The Contributors</p>
-        </div>
       </section>
-    </section>
+    </div>
     
     <script src="main.js"></script>
   </body>

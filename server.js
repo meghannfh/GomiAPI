@@ -3,8 +3,6 @@ const app = express();
 const { MongoClient, ObjectId } = require("mongodb");
 const cors = require("cors");
 const { response } = require("express");
-// const { request } = require("http")
-// const ejs = require('ejs')
 require('dotenv').config({ path: './config/.env' })
 
 app.set("view engine", "ejs");
@@ -75,6 +73,23 @@ app.get("/get/:id", async (request, response) => {
     response.status(500).send({ message: error.message });
   }
 });
+
+//link to form in ejs
+app.post('/add', async (request, response) => {
+  try{
+    let newItem = await db.collection('nagai-gomi').insertOne({
+      name: request.body.name,
+      material: request.body.material,
+      classification: request.body.classification,
+      instructions: request.body.instructions,
+      contact: request.body.contact
+    })
+    response.redirect('/')
+  }catch (error){
+
+  }
+})
+
 
 app.listen(process.env.PORT || PORT, () => {
   console.log("Server is running.");

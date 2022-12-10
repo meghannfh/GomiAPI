@@ -10,9 +10,6 @@
 }
 
 body {
-    display: grid;
-    min-height: 100vh;
-    place-content: center;
     background-image: url('/assets/bg3.jpeg');
     background-position: center;
     background-size: cover;
@@ -20,18 +17,107 @@ body {
     position: relative;
 }
 
-.container{
+.middleSectionContainer h4,
+.middleSectionContainer p,
+.card-body,
+.card-title h2 {
+    font-size: 1rem;
+}
+
+/*top nav and add item button*/
+nav {
+    padding: .5rem .5rem 0 0;
+    position: absolute;
+    top: 0;
+    right: 0;
     display: flex;
-    flex-direction: row;
-    gap: .3em;
-    /* width: fit-content; */
-    /* width: 100vw; */
-    justify-content: center;
-    /* margin: 4em auto; */
+    gap: .5rem;
+}
+
+nav button {
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+/*TEMPORARILY HIDE ADD FORM BTN UNTIL ALL FUNCTIONALITY HAS BEEN TESTED*/
+.form-btn{
+    display: none;
+}
+/*TEMPORARILY HIDE ADD FORM BTN UNTIL ALL FUNCTIONALITY HAS BEEN TESTED*/
+
+nav button:hover{
+    cursor: pointer;
+    background-color: #009dff;
+    color: white;
+}
+/*END top nav and add item button*/
+
+/*ADD ITEM FORM CONTAINER*/
+.add-form-container{
+    position: absolute;
+    top: 0;
+    left: -320px;
+    z-index: 4;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    transition: ease-in .3s;
+}
+
+.add-form-container.show-form{
+    left: 0;
+}
+
+.add-form-container form{
+    font-size: smaller;
+    height: 100%;
+    padding: 1rem;
+    background-color: aliceblue;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-text {
+    border: solid #009dff 3px;
+    padding: .5rem .5rem;
+    border-radius: 15px;
+    width: 100%;
+}
+
+input.form-submit,
+input.form-reset,
+.form-close{
+    padding: .3rem 1rem;
+}
+
+.form-radio{
+    padding: .5rem;
+    border-radius: 15px;
+    background-color: white;
+}
+
+
+.add-form-container form > div {
+    margin-bottom: .5rem;
+}
+
+/******* END ADD ITEM FORM CONTAINER *******/
+.container{
+    display: grid;
+    min-height: 100vh;
+    place-content: center;
+    gap: .3rem;
+    justify-items: center;
 }
 
 .titleContainer{
     width: fit-content;
+    align-self: center;
 }
 
 .titleContainer:hover{
@@ -39,9 +125,9 @@ body {
 }
 
 .searchContainer{
-    width:50%;
     display: flex;
     flex-direction: column;
+    margin: 0 .5rem;
     padding: calc(.5rem * 1.5) .5rem;
     background-color: #ffffffca;
     border-radius: 20px 20px;
@@ -59,29 +145,29 @@ body {
 .middleSectionContainer{
     gap: 1rem;
     margin-top: 1.5em;
-    width: 100%;
     justify-self: center;
     align-self: center;
     display: flex;
-    flex-direction: row;
-    border-radius: 10px 10px;
+    flex-direction: column;
 }
 
-.info {
-    width: 70%;
+.display-rows{
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    border-radius: 10px 0 0 10px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     overflow: hidden;
-    /* margin-top: calc(.5rem * 1.5);*/
-    /* padding: calc(.5rem * 1.5) 1rem; */
 }
 
 .bagAndMarkContainer{
-    width: 30%;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: .3rem;
     justify-content: center;
     overflow: hidden;
@@ -92,8 +178,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
-    /* padding: calc(.5rem * 1.5) calc(.5rem * 1.5); */
+}
+
+.markImg,
+.bagImg{
+    width: 125px;
+    height: 143px;
 }
 
 .recycleLabel,
@@ -102,34 +192,10 @@ body {
     padding: .5rem .5rem;
     line-height: 1rem;
     text-align: center;
-    width: 100%;
     background-color: rgba(171, 171, 171, 0.598);
     border-radius: 3px 3px 0px 0px;
-    font-size: 1rem;
-
 }
 
-.searchContainerBtns{
-    display: flex;
-    color:#f5fafa;
-    align-items: center;
-    justify-content: center;
-    font-size: .7rem;
-    font-family: 200;
-    width: 120px;
-    height: 35px;
-    border-radius: 20px 20px;
-    background-color: rgba(1, 186, 124, 0.785);
-}
-
-.searchContainerBtns:first-child{
-    font-size: .9rem;
-}
-
-.searchContainerBtns:hover {
-    background-color: rgba(2, 200, 134, 0.785);
-    cursor: pointer;
-}
 
 /*************GOMIGATA TITLE**********/
 .title1{
@@ -155,18 +221,6 @@ body {
     overflow-wrap: break-word;
     letter-spacing: -0.025em;
 }
-/*********HOME EXPLANATION AND DISCLAIMER*********/
-.subtitle{
-    font-size: 1rem;
-    font-weight: 200;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-}
-
-.subtitle.disclaimer{
-    font-size: 0.6rem;
-    font-style: italic;
-}
 
 /*********MAIN ACCORDIAN CONTENT************/
 .card {
@@ -180,7 +234,6 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    /* border-bottom: 3px solid #009dff; */
 }
 
 .card .card-body{
@@ -188,13 +241,16 @@ body {
     position: relative;
     overflow: hidden;
     height: 0;
-    transition: .5s;
+    transition: ease-in-out .5s;
 }
 
 .card .card-body > ol > li > h4 {
     letter-spacing: .2rem;
     text-transform: uppercase;
-    text-shadow: 0 0 1px rgb(51, 51, 51), 0 0 1px rgb(51, 51, 51), 0 0 1px rgb(51, 51, 51), 0 0 1px rgb(51, 51, 51);
+    padding: 0 .2rem;
+    background-color: rgb(11, 11, 11);
+    border-radius: .3rem;
+    display: inline-block;
 }
 
 .card.active .card-body {
@@ -204,17 +260,7 @@ body {
 
 .card-body ol li {
     display: list-item;
-    font-size: .9rem;
-    font-weight: 200;
     padding: .2rem 0;
-}
-
-.card-body .recycleTitle,
-.card-body .yes,
-.card-body .no,
-.card-body .nonCollectableTitle,
-.card-body .overSizeTitle{
-    display: inline;
 }
 
 /*********PLUS BUTTON************/
@@ -268,25 +314,15 @@ body {
     margin-bottom: calc(.5rem * 3);
 }
 
-.markImg,
-.bagImg{
-    width: 100%;
-    height: 100%;
-}
-
-
 /*INPUT STYLES*/
 .input {
     position: relative;
 }
 
 .input__field{
-    outline: .5px solid rgb(112, 112, 112);
     width: 100%;
     border: solid #009dff 3px;
     padding: calc(.3rem * 1.5) 2.5rem;
-    /* color: rgb(50, 48, 48); rgb(69, 72, 75) */
-    /*background: transparent; /*transparent*/
     background: transparent url("/assets/magnifying-glass-solid.svg") no-repeat 9px center;
     background-size: 30px 30px;
     border-radius: 15px;
@@ -333,9 +369,12 @@ body {
 /*BURNABLE OR NOT BURNABLE DESIGANTIONS*/
 .burnableDistinction > div > h4{
     font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0 .3rem;
+    border-radius: .5rem;
     display: inline-block;
     text-transform: uppercase;
-    text-shadow: 0 0 1px rgb(51, 51, 51), 0 0 1px rgb(51, 51, 51), 0 0 1px rgb(51, 51, 51), 0 0 1px rgb(51, 51, 51);
+    background-color: rgb(23, 23, 23);
     letter-spacing: .2rem;
 }
 
@@ -366,14 +405,13 @@ body {
 
 /*MATERIALS & INSTRUCTIONS SECTION*/
 .materialHeader{
-    display: block;
+    display: inline-block;
 }
 
 .instructionsHeader,
 .materialHeader{
-    font-weight: 400;
+    font-weight: 600;
     text-transform: uppercase;
-    font-size: 1rem;
 }
 
 .hidden{
@@ -384,30 +422,20 @@ body {
     display: inline-block;
 }
 
-.instructions,
-.material{
-    font-weight: 200;
-    font-size: 1.3rem;
-}
-
 /*CONTACT INFO*/
 .contactInfo{
-    flex-direction: column;
+    text-align: center;
+    padding: .5rem;
     align-items: center;
-    /* border: 1px solid rgb(51, 51, 51); */
-    padding: calc(.7rem * 1.5) .5rem;
+    background-color: pink;
+    border-radius: 1rem;
 }
 
-.specialOrOversize{
+h4.specialOrOversize{
     padding-top: .5rem;
-    font-weight: 400;
     font-style: italic;
     font-weight: 500;
     color: red;
-}
-
-.contactExplanation{
-    font-weight: 200;
 }
 
 .phoneNumber{
@@ -439,107 +467,38 @@ footer{
     gap: .5rem .2rem;
 }
 
-/*Contributors STYLES*/
-
-.child{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: .3rem;
-    height: 62px;
-    width:fit-content;
+/*MEDIA QUERIES*/
+@media screen and (min-width: 1024px){
+    .add-form-container form{
+        height: 100vh;
+        font-size: 1rem;
+    }
 }
 
-.child a {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-}
+@media screen and (min-width: 768px){
+    .searchContainer{
+        margin: 0 3rem;
+        padding: 1rem;
+    }
+    .display-rows {
+        flex-direction: row;
+    }
+    .bagAndMarkContainer{
+        grid-template-columns: repeat(1, 1fr);
+        width: fit-content;
+    }
 
-.child a:hover{
-    outline: 3px solid rgba(54, 148, 255, 0.848);
 }
-
-.child a img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: rgb(134, 181, 214);
-}
-
-.child > .text {
-    font-size: .7rem;
-    line-height: .7rem;
-}
-
 
 @media screen and (max-width: 786px) {
-    .titleContainer{
-        align-self: center;
-    }
-
     .title1, .title2{
         font-size: 6rem;
-    }
-
-    .container{
-        flex-direction: column;
-    }
-
-    .searchContainer{
-        align-self: center;
-        width: 90%;
-    }
-
-    .middleSectionContainer{
-        flex-direction: column;
-        align-self: center;
-    }
-
-    .info{
-        width: 100%;
-        border-radius: 10px 10px 0 0;
-    }
-
-    .bagAndMarkContainer{
-        flex-direction: row;
-        width: 100%;
-    }
-
-    .subtitle{
-        display:none;
-    }
-
-    .bagContainer,
-    .markContainer{
-        width: 50%;
-        overflow: hidden;
-    }
-}
-
-@media screen and (max-width: 425px){
-    .searchContainer{
-        width: 100%;
     }
 }
 
 @media screen and (max-width: 350px){
     .title1, .title2{
         font-size: 3rem;
-    }
-
-    .searchContainer{
-        width: auto;
-    }
-
-    .bagAndMarkContainer{
-        flex-direction: column;
-    }
-
-    .bagContainer,
-    .markContainer{
-        /* width: 100%; */
-        height: 10em;
     }
 
     .input__field{
