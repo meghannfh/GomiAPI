@@ -477,7 +477,7 @@ footer{
 
 @media screen and (min-width: 768px){
     .searchContainer{
-        margin: 0 3rem;
+        max-width: 700px;
         padding: 1rem;
     }
     .display-rows {
@@ -486,6 +486,7 @@ footer{
     .bagAndMarkContainer{
         grid-template-columns: repeat(1, 1fr);
         width: fit-content;
+        place-content: center;
     }
 
 }
