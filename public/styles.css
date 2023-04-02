@@ -144,11 +144,11 @@ input.form-reset,
 
 .middleSectionContainer{
     gap: 1rem;
-    margin-top: 1.5em;
-    justify-self: center;
+    margin: 1.5em 0 1.5rem 0;
     align-self: center;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .display-rows{
@@ -158,16 +158,17 @@ input.form-reset,
 }
 
 .info {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    overflow: hidden;
+    text-align: left;
 }
 
 .bagAndMarkContainer{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
     gap: .3rem;
     justify-content: center;
     overflow: hidden;
@@ -477,8 +478,12 @@ footer{
 
 @media screen and (min-width: 768px){
     .searchContainer{
-        max-width: 700px;
+        width: 700px;
         padding: 1rem;
+    }
+    .middleSectionContainer {
+        justify-content: space-between;
+        align-self: auto;
     }
     .display-rows {
         flex-direction: row;
