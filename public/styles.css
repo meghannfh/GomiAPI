@@ -148,7 +148,7 @@ input.form-reset,
     align-self: center;
     display: flex;
     flex-direction: column;
-
+    width: 100%;
 }
 
 .display-rows{
